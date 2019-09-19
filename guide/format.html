@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Format — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - label and annotate datasets">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Format — Label Studio">
+      <meta property="og:description" content="Label Studio - label and annotate datasets">
+      <meta property="og:image" content="https://https://github.com/heartexlabs/label-studio//guide/images/logo.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Format — Label Studio">
+      <meta name="twitter:description" content="Label Studio - label and annotate datasets">
+      <meta name="twitter:image" content="https://https://github.com/heartexlabs/label-studio/images/logo.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/guide/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+      <a class="menu-button"></a>
+      <a class="logo" href="/"></a>
+    </div>
+    <div id="header">
+  <a id="logo" href="/guide/">
+    <img src="/guide/images/ls_logo.png" alt="label studio logo">
+    <span>Label Studio</span>
+  </a>
+  <ul id="nav">
+    <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+          
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+    </ul>
+    <div class="list">
+      
+          <!-- <h2>
+               
+               Guide
+               
+               <select class="version-select">
+               <option value="SELF" selected>2.x</option>
+               <option value="v1">1.0</option>
+               <option value="012">0.12</option>
+               <option value="011">0.11</option>
+               </select>
+               
+               </h2>
+          --><ul class="menu-root">
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/index.html" class="sidebar-link">Introduction</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/format.html" class="sidebar-link current">Format</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/converters.html" class="sidebar-link">Converters</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/embed.html" class="sidebar-link">Embed</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/backend.html" class="sidebar-link">Backend</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/configuration.html" class="sidebar-link">Configuration</a>
+    </li>
+  
+    
+    
+      
+      
+          <li><h4>Objects</h4></li>
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/audio.html" class="sidebar-link">Audio</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/audioplus.html" class="sidebar-link">AudioPlus</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/image.html" class="sidebar-link">Image</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/text.html" class="sidebar-link">Text</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+          <li><h4>Controls</h4></li>
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/choices.html" class="sidebar-link">Choices</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/choice.html" class="sidebar-link">Choice</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/labels.html" class="sidebar-link">Labels</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/label.html" class="sidebar-link">Label</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/polygon.html" class="sidebar-link">Polygon</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/polygonlabels.html" class="sidebar-link">PolygonLabels</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/rectangle.html" class="sidebar-link">Rectangle</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/rectanglelabels.html" class="sidebar-link">RectangleLabels</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/rating.html" class="sidebar-link">Rating</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/textarea.html" class="sidebar-link">TextArea</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+          <li><h4>Visual</h4></li>
+      
+
+    
+    <li>
+      <a href="/guide/tags/header.html" class="sidebar-link">Header</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/hypertext.html" class="sidebar-link">HyperText</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/table.html" class="sidebar-link">Table</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/view.html" class="sidebar-link">View</a>
+    </li>
+    
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="content guide with-sidebar format-guide">
+  
+    
+  
+  
+    <h1>Format</h1>
+    
+  <h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>Input should be JSON formatted. All the files that you want to label are expected to be hosted somewhere and provided as an URL in the JSON. The example backend server can process other formats, but it converts any format into the JSON as a result.</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Output is JSON. Overall strucutre is the following:</p>
+<pre><code class="hljs json">&#123;
+  <span class="hljs-attr">"completions"</span>: [&#123; 
+    <span class="hljs-attr">"results"</span>: &#123;
+      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"yrSY-dipPI"</span>,
+      <span class="hljs-attr">"from_name"</span>: <span class="hljs-string">"sentiment"</span>,
+      <span class="hljs-attr">"to_name"</span>: <span class="hljs-string">"my_text"</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"choices"</span>,
+	  <span class="hljs-attr">"value"</span>: &#123;
+        <span class="hljs-attr">"choices"</span>: [<span class="hljs-string">"Neutral"</span>]
+      &#125;
+    &#125;
+  &#125;],
+  <span class="hljs-attr">"data"</span>: &#123; <span class="hljs-attr">"here are your task fields"</span>: <span class="hljs-string">""</span> &#125;
+&#125;</code></pre>
+
+<p>Completion is an object with five mandatory fields:</p>
+<ul>
+<li><strong>id</strong> unique id of the labeled region</li>
+<li><strong>from_name</strong> name of the tag that was used to label region</li>
+<li><strong>to_name</strong> name of the tag that provided the region to be labeled</li>
+<li><strong>type</strong> type of the labeling/tag</li>
+<li><strong>value</strong> tag specific value that includes the labeling result details</li>
+</ul>
+<p>For popular machine learning libraries there is converter code to transform Label Studio format in ML library format. <a href="/backend/converter/README.md">Learn More</a>  about it.</p>
+  
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/guide/guide/index.html">Introduction</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/guide/guide/converters.html">Converters</a> →</span>
+      
+    </div>
+  
+  <div class="footer">    
+      <!-- Caught a mistake or want to contribute to the documentation?
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/guide/format.md" target="_blank">
+	   Edit this page on GitHub!
+	   </a> -->
+  </div>
+</div>
+
+      </div>
+      <script src="/guide/js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="/guide/js/css.escape.js"></script>
+    <script src="/guide/js/common.js"></script>
+  </body>
+</html>

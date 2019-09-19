@@ -1,0 +1,105 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - label and annotate datasets">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Label Studio">
+      <meta property="og:description" content="Label Studio - label and annotate datasets">
+      <meta property="og:image" content="https://https://github.com/heartexlabs/label-studio//guide/images/logo.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Label Studio">
+      <meta name="twitter:description" content="Label Studio - label and annotate datasets">
+      <meta name="twitter:image" content="https://https://github.com/heartexlabs/label-studio/images/logo.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/guide/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+      <a class="menu-button"></a>
+      <a class="logo" href="/"></a>
+    </div>
+    <div id="header">
+  <a id="logo" href="/guide/">
+    <img src="/guide/images/ls_logo.png" alt="label studio logo">
+    <span>Label Studio</span>
+  </a>
+  <ul id="nav">
+    <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+          
+  <div class="sidebar">
+    <ul class="main-menu">
+      <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+    </ul>
+  </div>
+
+<div class="content  ">
+  
+    
+  <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>List element, used for ranking results. Great choice for recomendation systems.</p>
+<h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><ul>
+<li><code>elementValue</code> <strong>[string]</strong> lookup key for child object</li>
+<li><code>elementTag</code> <strong>([Text] | [Image] | [Audio])</strong> element used to render children</li>
+<li><code>value</code> <strong>[string]</strong> list value</li>
+<li><code>name</code> <strong>[string]</strong> of group</li>
+<li><code>sortedHighlightColor</code> <strong>[string]?</strong> color</li>
+<li><code>axis</code> <strong>[string]?</strong> axis used for drag-n-drop</li>
+<li><code>lockAxis</code> <strong>[string]?</strong> lock axis</li>
+</ul>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">HyperText</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$markup"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">HyperText</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">List</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"ranker"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$replies"</span> <span class="hljs-attr">elementValue</span>=<span class="hljs-string">"$text"</span> <span class="hljs-attr">elementTag</span>=<span class="hljs-string">"Text"</span> <span class="hljs-attr">ranked</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">sortedHighlightColor</span>=<span class="hljs-string">"#fcfff5"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">List</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+  
+  
+  <div class="footer">    
+      <!-- Caught a mistake or want to contribute to the documentation?
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/tags/list.md" target="_blank">
+	   Edit this page on GitHub!
+	   </a> -->
+  </div>
+</div>
+
+      </div>
+      <script src="/guide/js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="/guide/js/css.escape.js"></script>
+    <script src="/guide/js/common.js"></script>
+  </body>
+</html>

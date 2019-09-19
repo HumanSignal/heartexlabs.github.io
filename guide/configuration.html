@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Configuration — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - label and annotate datasets">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Configuration — Label Studio">
+      <meta property="og:description" content="Label Studio - label and annotate datasets">
+      <meta property="og:image" content="https://https://github.com/heartexlabs/label-studio//guide/images/logo.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Configuration — Label Studio">
+      <meta name="twitter:description" content="Label Studio - label and annotate datasets">
+      <meta name="twitter:image" content="https://https://github.com/heartexlabs/label-studio/images/logo.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/guide/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+      <a class="menu-button"></a>
+      <a class="logo" href="/"></a>
+    </div>
+    <div id="header">
+  <a id="logo" href="/guide/">
+    <img src="/guide/images/ls_logo.png" alt="label studio logo">
+    <span>Label Studio</span>
+  </a>
+  <ul id="nav">
+    <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+  </ul>
+</div>
+
+    
+      <div id="main" class="fix-sidebar">
+          
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+    </ul>
+    <div class="list">
+      
+          <!-- <h2>
+               
+               Guide
+               
+               <select class="version-select">
+               <option value="SELF" selected>2.x</option>
+               <option value="v1">1.0</option>
+               <option value="012">0.12</option>
+               <option value="011">0.11</option>
+               </select>
+               
+               </h2>
+          --><ul class="menu-root">
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/index.html" class="sidebar-link">Introduction</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/format.html" class="sidebar-link">Format</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/converters.html" class="sidebar-link">Converters</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/embed.html" class="sidebar-link">Embed</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/backend.html" class="sidebar-link">Backend</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/guide/configuration.html" class="sidebar-link current">Configuration</a>
+    </li>
+  
+    
+    
+      
+      
+          <li><h4>Objects</h4></li>
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/audio.html" class="sidebar-link">Audio</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/audioplus.html" class="sidebar-link">AudioPlus</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/image.html" class="sidebar-link">Image</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/text.html" class="sidebar-link">Text</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+          <li><h4>Controls</h4></li>
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/choices.html" class="sidebar-link">Choices</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/choice.html" class="sidebar-link">Choice</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/labels.html" class="sidebar-link">Labels</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/label.html" class="sidebar-link">Label</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/polygon.html" class="sidebar-link">Polygon</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/polygonlabels.html" class="sidebar-link">PolygonLabels</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/rectangle.html" class="sidebar-link">Rectangle</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/rectanglelabels.html" class="sidebar-link">RectangleLabels</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/rating.html" class="sidebar-link">Rating</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/textarea.html" class="sidebar-link">TextArea</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+          <li><h4>Visual</h4></li>
+      
+
+    
+    <li>
+      <a href="/guide/tags/header.html" class="sidebar-link">Header</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/hypertext.html" class="sidebar-link">HyperText</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/table.html" class="sidebar-link">Table</a>
+    </li>
+  
+    
+    
+      
+      
+
+      
+
+      
+
+    
+    <li>
+      <a href="/guide/tags/view.html" class="sidebar-link">View</a>
+    </li>
+    
+</ul>
+
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="content guide with-sidebar configuration-guide">
+  
+    
+  
+  
+    <h1>Configuration</h1>
+    
+  <h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><p>Editor configuration is based on XML-like tags. Tags can be divided<br>into three categories:</p>
+<ul>
+<li>Visual tags used for visual only elements<br>(non-interactive), examples: <strong>View</strong>, <strong>Header</strong>. </li>
+<li>Control tags used to label the objects, examples: <strong>Labels</strong>, <strong>Choices</strong>, <strong>Rating</strong>, <strong>TextArea</strong>. </li>
+<li>Object tags used to show elements that can be labeled: <strong>Image</strong>, <strong>Text</strong>, <strong>Audio</strong>, <strong>AudioPlus</strong>.</li>
+</ul>
+<p>The <strong>name</strong> attribute is mandatory for all control and object tags. Also,<br>each control tag should have <strong>toName</strong> attribute that should match<br>the <strong>name</strong> parameter in the object element. For example:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Labels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lbl"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Label 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Label 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Labels</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+<p>Note that in the case above Labels tags is used to label Text<br>tag. There could be multiple control, and object tags in the same<br>configuration and names are used to connect them.</p>
+<p>Here is an example of two-column labeling interface with multiple<br>control and object elements:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: flex;"</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 50%"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choose:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt-1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Choices</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"chc"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choice 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choice 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Choices</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span> 
+ <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 50%; margin-left: 1em"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Enter your question and rate text:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt-2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Rating</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"rating"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Rating</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">TextArea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"question"</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">TextArea</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+  
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/guide/guide/backend.html">Backend</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/guide/tags/audio.html">Audio</a> →</span>
+      
+    </div>
+  
+  <div class="footer">    
+      <!-- Caught a mistake or want to contribute to the documentation?
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/guide/configuration.md" target="_blank">
+	   Edit this page on GitHub!
+	   </a> -->
+  </div>
+</div>
+
+      </div>
+      <script src="/guide/js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="/guide/js/css.escape.js"></script>
+    <script src="/guide/js/common.js"></script>
+  </body>
+</html>
