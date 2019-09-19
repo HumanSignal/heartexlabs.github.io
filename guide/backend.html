@@ -440,7 +440,7 @@
     
   <h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>This is an example of the backend that can be used with the React frontend part. By default, the backend uses label tool scripts from ../build.</p>
 <h2 id="Linux-amp-Ubuntu-guide"><a href="#Linux-amp-Ubuntu-guide" class="headerlink" title="Linux &amp; Ubuntu guide"></a>Linux &amp; Ubuntu guide</h2><ol>
-<li>Install python and virtualenv. We recommend to use python 3.6, but probably python 2 solution will work too.  </li>
+<li>Install python and virtualenv. We recommend to use python 3.6, but probably python2 solution will work too.  </li>
 </ol>
 <pre><code class="hljs bash">apt install python3.6
 pip3 install virtualenv</code></pre>
@@ -464,17 +464,17 @@ pip3 install virtualenv</code></pre>
 <ol start="5">
 <li>Go to <a href="http://localhost:8200" target="_blank" rel="noopener">http://localhost:8200</a></li>
 </ol>
-<h2 id="Backend-Config"><a href="#Backend-Config" class="headerlink" title="Backend Config"></a>Backend Config</h2><p>By default service.py uses config.json. But you may call it with your own config: </p>
+<h2 id="Backend-Config"><a href="#Backend-Config" class="headerlink" title="Backend Config"></a>Backend Config</h2><p>By default service.py uses config.json. But you may call it with your config: </p>
 <pre><code class="hljs bash">python service.py -c &lt;your_config.json&gt;</code></pre>
 
 <h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p><strong>label_config</strong> configures UI for the Label tool.</p>
 <pre><code class="hljs json">"label_config": "../examples/chatbot/config.xml"</code></pre>
 
 
-<p><strong>input_path</strong> for tasks: it can be a file or a directory. In case of directory it reads all the files and creates a list of tasks that are merged together.</p>
+<p><strong>input_path</strong> for tasks: it can be a file or a directory. In the case of the directory, it reads all the files and creates a list of tasks.</p>
 <pre><code class="hljs json">"input_path": "./input/tasks.json"</code></pre>
 
-<p><strong>output_dir</strong> is used to store completions (labeling results) in json format. output_dir will be created automatically. Each task is mapped to corresponding completion json file.</p>
+<p><strong>output_dir</strong> is used to store completions (labeling results) in JSON format. output_dir will be created automatically. Each task is mapped to a corresponding completion JSON file.</p>
 <pre><code class="hljs json">"output_dir": "./output"</code></pre>
 
 <p>Example: task a.json and b.json consist of 3 tasks and there will be 6 completion files in output_dir: </p>
@@ -491,7 +491,7 @@ output/5.json = &#123;&quot;completions&quot;: [&#123;&quot;result&quot;: [...]&
 <p><strong>instruction</strong> Shows the instruction to a person who makes labeling</p>
 <pre><code class="hljs json">"instruction": "Type something to label experts!"</code></pre>
 
-<h2 id="Label-tool-options"><a href="#Label-tool-options" class="headerlink" title="Label tool options"></a>Label tool options</h2><p><strong>build_path</strong> points to the directory with js, css and other media from Editor (React app).</p>
+<h2 id="Label-tool-options"><a href="#Label-tool-options" class="headerlink" title="Label tool options"></a>Label tool options</h2><p><strong>build_path</strong> points to the directory with JS, CSS and other media from Editor (React app).</p>
 <pre><code class="hljs json">"editor": &#123;
   "build_path": "../build/static",
   "debug": false,

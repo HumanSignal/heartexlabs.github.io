@@ -439,7 +439,7 @@
     <h1>Format</h1>
     
   <h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>Input should be JSON formatted. All the files that you want to label are expected to be hosted somewhere and provided as an URL in the JSON. The example backend server can process other formats, but it converts any format into the JSON as a result.</p>
-<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>Output is JSON. Overall strucutre is the following:</p>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>The output is JSON. The overall structure is the following:</p>
 <pre><code class="hljs json">&#123;
   <span class="hljs-attr">"completions"</span>: [&#123; 
     <span class="hljs-attr">"results"</span>: &#123;
@@ -447,7 +447,7 @@
       <span class="hljs-attr">"from_name"</span>: <span class="hljs-string">"sentiment"</span>,
       <span class="hljs-attr">"to_name"</span>: <span class="hljs-string">"my_text"</span>,
       <span class="hljs-attr">"type"</span>: <span class="hljs-string">"choices"</span>,
-	  <span class="hljs-attr">"value"</span>: &#123;
+      <span class="hljs-attr">"value"</span>: &#123;
         <span class="hljs-attr">"choices"</span>: [<span class="hljs-string">"Neutral"</span>]
       &#125;
     &#125;
@@ -455,7 +455,7 @@
   <span class="hljs-attr">"data"</span>: &#123; <span class="hljs-attr">"here are your task fields"</span>: <span class="hljs-string">""</span> &#125;
 &#125;</code></pre>
 
-<p>Completion is an object with five mandatory fields:</p>
+<p>A completion is an object with five mandatory fields:</p>
 <ul>
 <li><strong>id</strong> unique id of the labeled region</li>
 <li><strong>from_name</strong> name of the tag that was used to label region</li>
@@ -463,7 +463,7 @@
 <li><strong>type</strong> type of the labeling/tag</li>
 <li><strong>value</strong> tag specific value that includes the labeling result details</li>
 </ul>
-<p>For popular machine learning libraries there is converter code to transform Label Studio format in ML library format. <a href="/backend/converter/README.md">Learn More</a>  about it.</p>
+<p>For popular machine learning libraries, there is converter code to transform Label Studio format in ML library format. <a href="/backend/converter/README.md">Learn More</a>  about it.</p>
   
   
     <div class="guide-links">
