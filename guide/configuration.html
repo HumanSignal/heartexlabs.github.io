@@ -3,20 +3,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head><meta name="generator" content="Hexo 3.9.0">
-      <title>Configuration — Label Studio</title>
+      <title>UI Configuration — Label Studio</title>
       <meta charset="utf-8">
       <meta name="description" content="Label Studio - label and annotate datasets">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <meta property="og:type" content="article">
-      <meta property="og:title" content="Configuration — Label Studio">
+      <meta property="og:title" content="UI Configuration — Label Studio">
       <meta property="og:description" content="Label Studio - label and annotate datasets">
-      <meta property="og:image" content="https://https://github.com/heartexlabs/label-studio//label-studio.github.io/images/logo.png">
+      <meta property="og:image" content="https://https://labelstud.io//images/logo.png">
 
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:title" content="Configuration — Label Studio">
+      <meta name="twitter:title" content="UI Configuration — Label Studio">
       <meta name="twitter:description" content="Label Studio - label and annotate datasets">
-      <meta name="twitter:image" content="https://https://github.com/heartexlabs/label-studio/images/logo.png">
+      <meta name="twitter:image" content="https://https://labelstud.io/images/logo.png">
 
       <meta name="msapplication-TileColor" content="#4fc08d">
       <meta name="theme-color" content="#4fc08d">
@@ -33,399 +33,125 @@
       <script async defer src="https://buttons.github.io/buttons.js"></script>
     
     <!-- main page styles -->
-    <link rel="stylesheet" href="/label-studio.github.io/css/page.css">
+    <link rel="stylesheet" href="/css/page.css">
 
     <!-- this needs to be loaded before guide's inline scripts -->
     
   </head>
   <body class="docs">
     <div id="mobile-bar">
-      <a class="menu-button"></a>
-      <a class="logo" href="/"></a>
+        <a class="menu-button"></a>
+        <a class="logo" href="/"></a>
     </div>
-    <div id="header">
-  <a id="logo" href="/label-studio.github.io/">
-    <img src="/label-studio.github.io/images/ls_logo.png" alt="label studio logo">
-    <span>Label Studio</span>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
   </a>
-  <ul id="nav">
-    <!-- Place this tag where you want the button to render. -->
+  <ul id="nav" style="display: flex; align-items: center">
+    
+
+<span style="margin-right: 1em;">Guide</span>
+
+
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/tags">Tags</a>
+
+
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/templates">Templates</a>
+
+
+<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
 
   </ul>
 </div>
-
+ 
     
-      <div id="main" class="fix-sidebar">
-          
+        <div id="main" class="fix-sidebar">
+            
   <div class="sidebar">
   <div class="sidebar-inner">
     <ul class="main-menu">
-      <!-- Place this tag where you want the button to render. -->
+      
+
+<span style="margin-right: 1em;">Guide</span>
+
+
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/tags">Tags</a>
+
+
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/templates">Templates</a>
+
+
+<!-- Place this tag where you want the button to render. -->
 <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
 
     </ul>
     <div class="list">
-      
-          <!-- <h2>
-               
-               Guide
-               
-               <select class="version-select">
-               <option value="SELF" selected>2.x</option>
-               <option value="v1">1.0</option>
-               <option value="012">0.12</option>
-               <option value="011">0.11</option>
-               </select>
-               
-               </h2>
-          --><ul class="menu-root">
+      <ul class="menu-root">
   
     
-    
-      
       
 
       
-
-      
-
-    
     <li>
-      <a href="/label-studio.github.io/guide/index.html" class="sidebar-link">Introduction</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/guide/format.html" class="sidebar-link">Format</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/guide/converters.html" class="sidebar-link">Converters</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/guide/embed.html" class="sidebar-link">Embed</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/guide/backend.html" class="sidebar-link">Backend</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/guide/configuration.html" class="sidebar-link current">Configuration</a>
-    </li>
-  
-    
-    
-      
-      
-          <li><h4>Objects</h4></li>
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/audio.html" class="sidebar-link">Audio</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/audioplus.html" class="sidebar-link">AudioPlus</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/image.html" class="sidebar-link">Image</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/text.html" class="sidebar-link">Text</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-          <li><h4>Controls</h4></li>
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/choices.html" class="sidebar-link">Choices</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/choice.html" class="sidebar-link">Choice</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/labels.html" class="sidebar-link">Labels</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/label.html" class="sidebar-link">Label</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/polygon.html" class="sidebar-link">Polygon</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/polygonlabels.html" class="sidebar-link">PolygonLabels</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/rectangle.html" class="sidebar-link">Rectangle</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/rectanglelabels.html" class="sidebar-link">RectangleLabels</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/rating.html" class="sidebar-link">Rating</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/textarea.html" class="sidebar-link">TextArea</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-          <li><h4>Visual</h4></li>
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/header.html" class="sidebar-link">Header</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/hypertext.html" class="sidebar-link">HyperText</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/table.html" class="sidebar-link">Table</a>
-    </li>
-  
-    
-    
-      
-      
-
-      
-
-      
-
-    
-    <li>
-      <a href="/label-studio.github.io/tags/view.html" class="sidebar-link">View</a>
+      <a href="/guide/index.html" class="sidebar-link">Introduction</a>
     </li>
     
+    
+      
+
+      
+    <li>
+      <a href="/guide/format.html" class="sidebar-link">Format</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/converters.html" class="sidebar-link">Converters</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/embed.html" class="sidebar-link">Embed</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/backend.html" class="sidebar-link">Backend</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/configuration.html" class="sidebar-link current">UI Configuration</a>
+    </li>
+    
+
+  <li style="position: absolute; bottom: 20px;">
+    <img src="/images/opossum/other/5.svg" alt="label studio logo" height="120">
+  </li>
 </ul>
 
-      
     </div>
   </div>
 </div>
@@ -436,15 +162,16 @@
     
   
   
-    <h1>Configuration</h1>
+    <h1>UI Configuration</h1>
     
-  <h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><p>Editor configuration is based on XML-like tags. Tags can be divided<br>into three categories:</p>
+  <h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><p>Editor configuration is based on XML-like tags. Tags can be divided into three categories:</p>
 <ul>
 <li>Visual tags used for visual only elements<br>(non-interactive), examples: <strong>View</strong>, <strong>Header</strong>. </li>
 <li>Control tags used to label the objects, examples: <strong>Labels</strong>, <strong>Choices</strong>, <strong>Rating</strong>, <strong>TextArea</strong>. </li>
 <li>Object tags used to show elements that can be labeled: <strong>Image</strong>, <strong>Text</strong>, <strong>Audio</strong>, <strong>AudioPlus</strong>.</li>
 </ul>
-<p>The <strong>name</strong> attribute is mandatory for all control and object tags. Also,<br>each control tag should have <strong>toName</strong> attribute that should match<br>the <strong>name</strong> parameter in the object element. For example:</p>
+<p><a class="button" href="/tags/">Explore Tags</a></p>
+<h2 id="Connecting-elements"><a href="#Connecting-elements" class="headerlink" title="Connecting elements"></a>Connecting elements</h2><p>The <strong>name</strong> attribute is mandatory for all control and object tags. Also, each control tag should have <strong>toName</strong> attribute that should match the <strong>name</strong> parameter in the object element. For example:</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">Labels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lbl"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Label 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
@@ -453,8 +180,8 @@
   <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
 
-<p>Note that in the case above, Label tags are used to label Text<br>tag. There could be multiple control, and object tags in the same<br>configuration, and names are used to connect them.</p>
-<p>Here is an example of two-column labeling interface with multiple<br>control and object elements:</p>
+<p>Note that in the case above, Label tags are used to label Text tag. There could be multiple control, and object tags in the same configuration, and names are used to connect them.</p>
+<h2 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h2><p>Here is an example of two-column labeling interface with multiple control and object elements:</p>
 <pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: flex;"</span>&gt;</span>
  <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 50%"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choose:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
@@ -477,11 +204,9 @@
     <div class="guide-links">
       
       
-        <span>← <a href="/label-studio.github.io/guide/backend.html">Backend</a></span>
+        <span>← <a href="/guide/backend.html">Backend</a></span>
       
       
-      
-        <span style="float: right;"><a href="/label-studio.github.io/tags/audio.html">Audio</a> →</span>
       
     </div>
   
@@ -493,12 +218,12 @@
   </div>
 </div>
 
-      </div>
-      <script src="/label-studio.github.io/js/smooth-scroll.min.js"></script>
+        </div>
+        <script src="/js/smooth-scroll.min.js"></script>
     
 
     <!-- main custom script for sidebars, version selects etc. -->
-    <script src="/label-studio.github.io/js/css.escape.js"></script>
-    <script src="/label-studio.github.io/js/common.js"></script>
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
   </body>
 </html>

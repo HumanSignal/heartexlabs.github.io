@@ -3,18 +3,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head><meta name="generator" content="Hexo 3.9.0">
-      <title>Choice — Label Studio</title>
+      <title>Introduction — Label Studio</title>
       <meta charset="utf-8">
       <meta name="description" content="Label Studio - label and annotate datasets">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <meta property="og:type" content="article">
-      <meta property="og:title" content="Choice — Label Studio">
+      <meta property="og:title" content="Introduction — Label Studio">
       <meta property="og:description" content="Label Studio - label and annotate datasets">
       <meta property="og:image" content="https://https://labelstud.io//images/logo.png">
 
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:title" content="Choice — Label Studio">
+      <meta name="twitter:title" content="Introduction — Label Studio">
       <meta name="twitter:description" content="Label Studio - label and annotate datasets">
       <meta name="twitter:image" content="https://https://labelstud.io/images/logo.png">
 
@@ -111,7 +111,7 @@
 
       
     <li>
-      <a href="/tags/index.html" class="sidebar-link">Introduction</a>
+      <a href="/tags/index.html" class="sidebar-link current">Introduction</a>
     </li>
     
     
@@ -215,7 +215,7 @@
 
       
     <li>
-      <a href="/tags/choice.html" class="sidebar-link current">Choice</a>
+      <a href="/tags/choice.html" class="sidebar-link">Choice</a>
     </li>
     
     
@@ -428,28 +428,29 @@
     
   
   
-    <h1>Choice</h1>
+    <h1>Introduction</h1>
     
-  <h2 id="Choice"><a href="#Choice" class="headerlink" title="Choice"></a>Choice</h2><p>Choice tag represents a single choice</p>
-<h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><ul>
-<li><code>value</code> <strong>[string]</strong> label value</li>
-<li><code>selected</code> <strong>[boolean]?</strong> If this label should be preselected</li>
-<li><code>alias</code> <strong>[string]?</strong> label alias</li>
-<li><code>hotkey</code> <strong>[string]?</strong> hokey</li>
+  <p>Editor configuration is based on XML-like tags. Tags can be divided into three categories:</p>
+<ul>
+<li>Visual tags used for visual only elements<br>(non-interactive), examples: <strong>View</strong>, <strong>Header</strong>. </li>
+<li>Control tags used to label the objects, examples: <strong>Labels</strong>, <strong>Choices</strong>, <strong>Rating</strong>, <strong>TextArea</strong>. </li>
+<li>Object tags used to show elements that can be labeled: <strong>Image</strong>, <strong>Text</strong>, <strong>Audio</strong>, <strong>AudioPlus</strong>.</li>
 </ul>
-<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">Choices</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"gender"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt-1"</span> <span class="hljs-attr">choice</span>=<span class="hljs-string">"single"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">alias</span>=<span class="hljs-string">"M"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Male"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">alias</span>=<span class="hljs-string">"F"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Female"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">Choices</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt-1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"John went to see Marry"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+<h2 id="Connecting-elements"><a href="#Connecting-elements" class="headerlink" title="Connecting elements"></a>Connecting elements</h2><p>The <strong>name</strong> attribute is mandatory for all control and object tags. Also, each control tag should have <strong>toName</strong> attribute that should match the <strong>name</strong> parameter in the object element. For example:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Labels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lbl"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Label 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Label 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Labels</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
 
+<p>Note that in the case above, Label tags are used to label Text tag. There could be multiple control, and object tags in the same configuration, and names are used to connect them.</p>
   
   
   <div class="footer">    
       <!-- Caught a mistake or want to contribute to the documentation?
-	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/tags/choice.md" target="_blank">
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/tags/index.md" target="_blank">
 	   Edit this page on GitHub!
 	   </a> -->
   </div>

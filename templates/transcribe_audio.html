@@ -3,18 +3,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head><meta name="generator" content="Hexo 3.9.0">
-      <title>Format — Label Studio</title>
+      <title>Transcribe an audio — Label Studio</title>
       <meta charset="utf-8">
       <meta name="description" content="Label Studio - label and annotate datasets">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <meta property="og:type" content="article">
-      <meta property="og:title" content="Format — Label Studio">
+      <meta property="og:title" content="Transcribe an audio — Label Studio">
       <meta property="og:description" content="Label Studio - label and annotate datasets">
       <meta property="og:image" content="https://https://labelstud.io//images/logo.png">
 
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:title" content="Format — Label Studio">
+      <meta name="twitter:title" content="Transcribe an audio — Label Studio">
       <meta name="twitter:description" content="Label Studio - label and annotate datasets">
       <meta name="twitter:image" content="https://https://labelstud.io/images/logo.png">
 
@@ -51,7 +51,7 @@
   <ul id="nav" style="display: flex; align-items: center">
     
 
-<span style="margin-right: 1em;">Guide</span>
+<a style="margin-right: 1em; text-decoration: underline;" href="/guide">Guide</a>
 
 
 
@@ -59,7 +59,7 @@
 
 
 
-<a style="margin-right: 1em; text-decoration: underline;" href="/templates">Templates</a>
+<span style="margin-right: 1em;">Templates</span>
 
 
 <!-- Place this tag where you want the button to render. -->
@@ -78,7 +78,7 @@
     <ul class="main-menu">
       
 
-<span style="margin-right: 1em;">Guide</span>
+<a style="margin-right: 1em; text-decoration: underline;" href="/guide">Guide</a>
 
 
 
@@ -86,7 +86,7 @@
 
 
 
-<a style="margin-right: 1em; text-decoration: underline;" href="/templates">Templates</a>
+<span style="margin-right: 1em;">Templates</span>
 
 
 <!-- Place this tag where you want the button to render. -->
@@ -102,48 +102,80 @@
       
 
       
+        
+      
     <li>
-      <a href="/guide/index.html" class="sidebar-link">Introduction</a>
+      <a href="/templates/audio_classification.html" class="sidebar-link">Audio Classification</a>
     </li>
     
     
       
 
       
+        
+      
     <li>
-      <a href="/guide/format.html" class="sidebar-link current">Format</a>
+      <a href="/templates/audio_regions.html" class="sidebar-link">Audio Regions</a>
     </li>
     
     
       
 
       
+        
+      
     <li>
-      <a href="/guide/converters.html" class="sidebar-link">Converters</a>
+      <a href="/templates/chatbot_analysis.html" class="sidebar-link">Chatbot Analysis</a>
     </li>
     
     
       
 
       
+        
+      
     <li>
-      <a href="/guide/embed.html" class="sidebar-link">Embed</a>
+      <a href="/templates/image_bbox.html" class="sidebar-link">Image Object Detection</a>
     </li>
     
     
       
 
       
+        
+      
     <li>
-      <a href="/guide/backend.html" class="sidebar-link">Backend</a>
+      <a href="/templates/named_entity.html" class="sidebar-link">Named Entity Recognition</a>
     </li>
     
     
       
 
       
+        
+      
     <li>
-      <a href="/guide/configuration.html" class="sidebar-link">UI Configuration</a>
+      <a href="/templates/index.html" class="sidebar-link">Templates</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/sentiment_analysis.html" class="sidebar-link">Sentiment Analysis</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/transcribe_audio.html" class="sidebar-link current">Transcribe an audio</a>
     </li>
     
 
@@ -157,55 +189,29 @@
 </div>
 
 
-<div class="content guide with-sidebar format-guide">
+<div class="content templates with-sidebar ">
   
     
   
   
-    <h1>Format</h1>
+    <h1>Transcribe an audio</h1>
     
-  <h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>Input should be JSON formatted. All the files that you want to label are expected to be hosted somewhere and provided as an URL in the JSON. The example backend server can process other formats, but it converts any format into the JSON as a result.</p>
-<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>The output is JSON. The overall structure is the following:</p>
-<pre><code class="hljs json">&#123;
-  <span class="hljs-attr">"completions"</span>: [&#123; 
-    <span class="hljs-attr">"results"</span>: &#123;
-      <span class="hljs-attr">"id"</span>: <span class="hljs-string">"yrSY-dipPI"</span>,
-      <span class="hljs-attr">"from_name"</span>: <span class="hljs-string">"sentiment"</span>,
-      <span class="hljs-attr">"to_name"</span>: <span class="hljs-string">"my_text"</span>,
-      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"choices"</span>,
-      <span class="hljs-attr">"value"</span>: &#123;
-        <span class="hljs-attr">"choices"</span>: [<span class="hljs-string">"Neutral"</span>]
-      &#125;
-    &#125;
-  &#125;],
-  <span class="hljs-attr">"data"</span>: &#123; <span class="hljs-attr">"here are your task fields"</span>: <span class="hljs-string">""</span> &#125;
-&#125;</code></pre>
+  <p>Listen to an audio file and transcribe its content in natural language</p>
+<p><img src="https://user.fm/files/v2-e1f1d31d32db73c07d20a96a78758623/Screen%20Shot%202019-08-01%20at%209.39.54%20PM.png" alt="Transcribe an Audio" title="Transcribe an Audio"></p>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><pre><code class="hljs bash">python server.py -c config.json -l ../examples/transcribe_audio/config.xml -i ../examples/transcribe_audio/tasks.json -o output</code></pre>
 
-<p>A completion is an object with five mandatory fields:</p>
-<ul>
-<li><strong>id</strong> unique id of the labeled region</li>
-<li><strong>from_name</strong> name of the tag that was used to label region</li>
-<li><strong>to_name</strong> name of the tag that provided the region to be labeled</li>
-<li><strong>type</strong> type of the labeling/tag</li>
-<li><strong>value</strong> tag specific value that includes the labeling result details</li>
-</ul>
-<p>For popular machine learning libraries, there is converter code to transform Label Studio format in ML library format. <a href="/backend/converter/README.md">Learn More</a>  about it.</p>
+<h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Listen the audio:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Audio</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"audio"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$url"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Audio</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Write the transcription:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">TextArea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"answer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">TextArea</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
   
-  
-    <div class="guide-links">
-      
-      
-        <span>← <a href="/guide/index.html">Introduction</a></span>
-      
-      
-      
-        <span style="float: right;"><a href="/guide/converters.html">Converters</a> →</span>
-      
-    </div>
   
   <div class="footer">    
       <!-- Caught a mistake or want to contribute to the documentation?
-	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/guide/format.md" target="_blank">
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/templates/transcribe_audio.md" target="_blank">
 	   Edit this page on GitHub!
 	   </a> -->
   </div>

@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Chatbot Analysis — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - label and annotate datasets">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Chatbot Analysis — Label Studio">
+      <meta property="og:description" content="Label Studio - label and annotate datasets">
+      <meta property="og:image" content="https://https://labelstud.io//images/logo.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Chatbot Analysis — Label Studio">
+      <meta name="twitter:description" content="Label Studio - label and annotate datasets">
+      <meta name="twitter:image" content="https://https://labelstud.io/images/logo.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+        <a class="logo" href="/"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/guide">Guide</a>
+
+
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/tags">Tags</a>
+
+
+
+<span style="margin-right: 1em;">Templates</span>
+
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
+
+  </ul>
+</div>
+ 
+    
+        <div id="main" class="fix-sidebar">
+            
+  <div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/guide">Guide</a>
+
+
+
+<a style="margin-right: 1em; text-decoration: underline;" href="/tags">Tags</a>
+
+
+
+<span style="margin-right: 1em;">Templates</span>
+
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
+
+    </ul>
+    <div class="list">
+      <ul class="menu-root">
+  
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/audio_classification.html" class="sidebar-link">Audio Classification</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/audio_regions.html" class="sidebar-link">Audio Regions</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/chatbot_analysis.html" class="sidebar-link current">Chatbot Analysis</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/image_bbox.html" class="sidebar-link">Image Object Detection</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/named_entity.html" class="sidebar-link">Named Entity Recognition</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/index.html" class="sidebar-link">Templates</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/sentiment_analysis.html" class="sidebar-link">Sentiment Analysis</a>
+    </li>
+    
+    
+      
+
+      
+        
+      
+    <li>
+      <a href="/templates/transcribe_audio.html" class="sidebar-link">Transcribe an audio</a>
+    </li>
+    
+
+  <li style="position: absolute; bottom: 20px;">
+    <img src="/images/opossum/other/5.svg" alt="label studio logo" height="120">
+  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="content templates with-sidebar ">
+  
+    
+  
+  
+    <h1>Chatbot Analysis</h1>
+    
+  <p>Analyze the chat dialog, classify it and provide your own answer</p>
+<p><img src="https://user.fm/files/v2-cb81c8aaa30170724ea19e3af7218fc8/Screen%20Shot%202019-08-01%20at%209.27.14%20PM.png" alt="Chatbot Analysis" title="Chatbot Analysis"></p>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><pre><code class="hljs bash">python server.py -c config.json -l ../examples/chatbot_analysis/config.xml -i ../examples/chatbot_analysis/tasks.json -o output</code></pre>
+
+<h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">HyperText</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$dialogs"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">HyperText</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Rate last answer:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Choices</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"chc-1"</span> <span class="hljs-attr">choice</span>=<span class="hljs-string">"single-radio"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"dialog"</span> <span class="hljs-attr">showInline</span>=<span class="hljs-string">"true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Bad answer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Neutral answer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Good answer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Choices</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Your answer:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">TextArea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"answer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">TextArea</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+  
+  
+  <div class="footer">    
+      <!-- Caught a mistake or want to contribute to the documentation?
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/templates/chatbot_analysis.md" target="_blank">
+	   Edit this page on GitHub!
+	   </a> -->
+  </div>
+</div>
+
+        </div>
+        <script src="/js/smooth-scroll.min.js"></script>
+    
+
+    <!-- main custom script for sidebars, version selects etc. -->
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+  </body>
+</html>
