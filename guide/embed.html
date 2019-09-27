@@ -5,17 +5,17 @@
   <head><meta name="generator" content="Hexo 3.9.0">
       <title>Embed — Label Studio</title>
       <meta charset="utf-8">
-      <meta name="description" content="Label Studio - label and annotate datasets">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <meta property="og:type" content="article">
       <meta property="og:title" content="Embed — Label Studio">
-      <meta property="og:description" content="Label Studio - label and annotate datasets">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
       <meta property="og:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
 
       <meta name="twitter:card" content="summary">
       <meta name="twitter:title" content="Embed — Label Studio">
-      <meta name="twitter:description" content="Label Studio - label and annotate datasets">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
       <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
 
       <meta name="msapplication-TileColor" content="#4fc08d">
@@ -166,7 +166,7 @@
   
     <h1>Embed</h1>
     
-  <p>Clone this repository and install all dependencies:</p>
+  <p>Clone the repository and install all dependencies:</p>
 <pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git@github.com:heartexlabs/label-studio.git
 <span class="hljs-built_in">cd</span> label-studio
 npm install</code></pre>
@@ -175,6 +175,7 @@ npm install</code></pre>
 <h2 id="Run-a-development-build"><a href="#Run-a-development-build" class="headerlink" title="Run a development build"></a>Run a development build</h2><pre><code class="hljs bash">npm run start</code></pre>
 
 <p>And open your browser at <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a></p>
+<p>A good introduction point is to study <code>src/env/development.js</code>. That file defines a labeling config for the studio as well as creates the environment.</p>
 <h2 id="Run-a-production-build"><a href="#Run-a-production-build" class="headerlink" title="Run a production build"></a>Run a production build</h2><pre><code class="hljs bash">npm run publish</code></pre>
 
 <p>Generates the compiled version of label studio. This compiled version needs to be included in your app.</p>
