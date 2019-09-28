@@ -357,6 +357,9 @@ body.docs #nav {
   position: relative;
   margin: 0 0.6em;
 }
+#nav a {
+  text-decoration: underline;
+}
 #nav .nav-dropdown .nav-link:hover,
 #nav .nav-dropdown .nav-link.current {
   border-bottom: none;

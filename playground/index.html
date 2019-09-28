@@ -1,0 +1,365 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+      
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+
+    
+      <link rel="stylesheet" href="/css/codemirror.css">
+      <script src="/js/jquery.min.js"></script>      
+      <script src="/js/codemirror.js"></script>
+      <script src="/js/xml.js"></script>      
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+    
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+        <a class="logo" href="/"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+
+<a style="margin-right: 1em;" href="/guide">Guide</a>
+
+
+
+<a style="margin-right: 1em;" href="/tags">Tags</a>
+
+
+
+<a style="margin-right: 1em;" href="/templates">Templates</a>
+
+
+
+<span style="margin-right: 1em;">Playground</span>
+
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
+
+  </ul>
+</div>
+ 
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+
+<div class="content playground with-sidebar ">
+  
+    
+  
+    
+  <div style="padding-left: 60px; max-width: 700px; margin: 0 auto; margin-bottom: 2em;">
+    <h1>Playground</h1>
+    Start typing in the config, and you can quickly preview the labeling interface. At the bottom of the page, you have live serialization updates of what Label Studio expects as an input and what it gives you as a result of your labeling work.
+</div>
+
+
+
+
+<style>
+ .content {
+     max-width: none !important;
+     padding-right: 50px;
+ }
+
+ .validation {
+     margin-top: 1em;
+     margin-left: 1em;
+     color: red;
+ }
+ 
+ iframe {
+     border: 0px;
+ }
+
+ #render-editor {
+     width: 100%;
+ }
+
+ #editor-wrap {
+     background-color: rgb(252,252,252);
+     padding: 5px;
+     display: none;
+ }
+
+ .preview {
+     padding: 5px;
+     overflow: auto;
+ }
+</style>
+
+<div>
+    <div style="display: flex; width: 100%; background: rgb(252,252,252);">
+        <div style="width: 49%; margin-right: 2%;"><h3>Config</h3></div>
+        <div style="width: 49%;"><h3>Preview</h3></div>
+    </div>
+    <div style="display: flex; margin-bottom: 1em; width: 100%">
+        <div style="color: rgba(0,0,0,.6); background: rgb(252,252,252); padding-right: 2em; width: 400px;">
+            <!-- Textarea -->
+            
+            <textarea name="label_config" cols="40" rows="10" class="project-form htx-html-editor" id="id_label_config"></textarea>
+            <div class="validation"></div>
+        </div>
+        <div style="width: 60%; flex: 1; background: rgb(252,252,252)">
+            
+            <div id="editor-wrap"></div>
+            <pre class="preview" id="preload-editor">...</pre>
+        </div>
+    </div>
+    <!--  & Preview in two cols -->
+    <div style="display: flex;">
+        <div style="width: 49%; margin-right: 2%">
+            <h3>Input Preview</h3>
+            <div>
+                <pre class="preview" id="upload-data-example">...</pre>
+            </div>
+        </div>
+        <div style="width: 49%;">
+            <h3>Output Preview</h3>
+            <div class="ui positive message">
+                <pre class="preview" id="data-results">...</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+ function debounce(func, wait, immediate) {
+     let timeout;
+
+     return function () {
+         const context = this, args = arguments;
+         const later = () => {
+             timeout = null;
+             if (!immediate) func.apply(context, args);
+         };
+         const callNow = immediate && !timeout;
+
+         clearTimeout(timeout);
+         timeout = setTimeout(later, wait);
+         if (callNow) func.apply(context, args);
+     };
+ }
+
+ $(function () {
+     // serialize editor output by timer
+     setInterval(function () {
+         if (typeof Htx !== 'undefined') {
+             $('#data-results').text(JSON.stringify(Htx.completionStore.selected.serializeCompletion(), null, 4));
+             $('#data-results').parent().show();
+         }
+     }, 500);
+
+     var host = "http://stage-05.heartex.net";
+     var url_string = window.location.href
+     var url = new URL(url_string);
+     
+     // Label code mirror
+     let labelEditor = CodeMirror.fromTextArea(document.getElementById('id_label_config'), {
+         lineNumbers: true,
+         mode: "text/html",         
+     });
+
+     var _c = url.searchParams.get("config");
+     if (_c && _c.length > 0) {
+         console.log("wtf");
+         var config = url.searchParams.get("config");
+         config = config.replace(/[<][b][r][>]/gm, "\n");
+         labelEditor.setValue(config);
+         validate_config();
+     } else {
+         labelEditor.setValue("<View>\n  \n</View>");
+     }
+     
+     // refresh for proper line numbers drawing
+     labelEditor.refresh();
+     // add validation
+     labelEditor.on('change', debounce(function (editor) {
+         validate_config(editor);
+     }, 500));
+
+     window.labelEditor = labelEditor;
+
+     function validate_name() {
+         let name = $('#id_title').val();
+         validation_message('', 0);         
+         return 0;
+     }
+
+     function validation_message(msg, status) {
+         let o = $('.validation');
+         o.text(msg);
+
+         if (status === -1) {
+             o.removeClass('hidden');
+             o.addClass('visible');
+         }
+         if (status === 0) {
+             o.removeClass('visible');
+             o.addClass('hidden');
+         }
+     }
+
+     // storage of validation results
+     // let is_collection_ok = false;
+     let is_label_ok = false;
+
+     function editor_iframe(res) {
+         // generate new iframe
+         let iframe = $('<iframe><iframe>');
+         iframe.className="editor-preview";
+         // add iframe to wrapper div
+         $('#editor-wrap').append(iframe);
+         $('#editor-wrap').fadeIn();
+         
+         iframe.on('load', function () {
+             // remove old iframe
+             $('#render-editor').hide();
+             $('#render-editor').remove();
+             // assign id to new iframe
+             iframe.attr('id', 'render-editor');
+             iframe.show();
+             // set height for iframe
+             let obj = document.getElementById('render-editor');
+             obj.style.height = (obj.contentWindow.document.body.scrollHeight + 30) + 'px';
+             // hide "..."
+             $('#preload-editor').hide();
+         });
+
+         // load new data into iframe
+         iframe.attr('srcdoc', res);
+     }
+
+     function show_render_editor(editor) {
+         let config = labelEditor.getValue();
+         $.ajax({
+             url: host + '/demo/render-editor?full_editor=t&config=' + encodeURIComponent(config),
+             method: 'GET',
+             success: editor_iframe,
+             error: function() {
+                 $('#preload-editor').show();
+             }
+         })
+     }
+     
+     // send request to server with configs to validate
+     function validate_config(editor) {
+
+         // get current scheme type from current editor
+         let url = host + '/api/projects/validate/';
+         var val = labelEditor.getValue();
+
+         if (!val.length)
+             return;
+
+         // label config validation
+         $.ajax({
+             url: url,
+             method: 'POST',
+             data: {label_config: val},
+             success: function (res) {
+                 is_label_ok = true;
+                 validation_message('', 0);
+                 $('#render-editor').show();
+                 show_render_editor(editor);
+                 // check_submit_button();
+             },
+             error: function (res) {
+                 is_label_ok = false;
+                 validation_message(res.responseJSON['label_config'][0], -1);
+                 $('#render-editor').hide();
+                 // check_submit_button();
+             }
+         });
+
+         // load sample task
+         $.get({
+             url: host + '/business/projects/upload-example/',
+             data: {label_config: val}
+         })
+          .fail(o => {
+              $('#upload-data-example').text('...')
+          })
+          .done(o => {
+              $('#upload-data-example').text(JSON.stringify(JSON.parse(o), null, 4))
+          })
+     }
+
+ });
+</script>
+
+
+
+
+  
+  <div class="footer">    
+      <!-- Caught a mistake or want to contribute to the documentation?
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/playground/index.md" target="_blank">
+	   Edit this page on GitHub!
+	   </a> -->
+  </div>
+</div>
+
+        </div>
+        <script src="/js/smooth-scroll.min.js"></script>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>  
+</html>

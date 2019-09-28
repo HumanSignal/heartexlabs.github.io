@@ -396,6 +396,9 @@ body.docs #nav {
   position: relative;
   margin: 0 0.6em;
 }
+#nav a {
+  text-decoration: underline;
+}
 #nav .nav-dropdown .nav-link:hover,
 #nav .nav-dropdown .nav-link.current {
   border-bottom: none;
@@ -1064,6 +1067,12 @@ ul.demo li {
   padding: 12px 24px;
   display: inline-block;
   vertical-align: middle;
+}
+.content a.lnk {
+  color: #8aad00;
+  text-decoration: dotted;
+  margin-left: 10px;
+  border-bottom: 1px dashed #8aad00;
 }
 .content img {
   max-width: 100%;
