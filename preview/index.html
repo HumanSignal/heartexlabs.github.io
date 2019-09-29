@@ -38,11 +38,6 @@
     <link rel="stylesheet" href="/css/page.css">
 
     
-      <link rel="stylesheet" href="/css/codemirror.css">
-      <script src="/js/jquery.min.js"></script>      
-      <script src="/js/codemirror.js"></script>
-      <script src="/js/xml.js"></script>      
-    
 
     <!-- this needs to be loaded before guide's inline scripts -->
     
@@ -72,7 +67,7 @@
 
 
 
-<span style="margin-right: 1em;">Playground</span>
+<a style="margin-right: 1em;" href="/playground">Playground</a>
 
 
 <!-- Place this tag where you want the button to render. -->
@@ -87,13 +82,61 @@
         <div id="main" class="fix-sidebar">
             
   
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
 
-<div class="content playground with-sidebar ">
+<a style="margin-right: 1em;" href="/guide">Guide</a>
+
+
+
+<a style="margin-right: 1em;" href="/tags">Tags</a>
+
+
+
+<a style="margin-right: 1em;" href="/templates">Templates</a>
+
+
+
+<a style="margin-right: 1em;" href="/playground">Playground</a>
+
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
+
+    </ul>
+    <div class="list">
+      <ul class="menu-root">
+  
+    
+      
+
+      
+    <li>
+      <a href="/preview/index.html" class="sidebar-link current"></a>
+    </li>
+    
+
+  <li style="position: absolute; bottom: 20px;">
+    <img src="/images/opossum/other/5.svg" alt="label studio logo" height="120">
+  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="content preview with-sidebar ">
   
     
   
     
-  <div style="padding-left: 60px; max-width: 700px; margin: 0 auto; margin-bottom: 2em;">
+  <p>&lt;&gt;</p>
+<div style="padding-left: 60px; max-width: 700px; margin: 0 auto; margin-bottom: 2em;">
     <h1>Playground</h1>
     Start typing in the config, and you can quickly preview the labeling interface. At the bottom of the page, you have live serialization updates of what Label Studio expects as an input and what it gives you as a result of your labeling work.
 </div>
@@ -195,7 +238,7 @@
          }
      }, 500);
 
-     var host = "https://go.heartex.net";
+     var host = "http://stage-05.heartex.net";
      var url_string = window.location.href
      var url = new URL(url_string);
      
@@ -339,7 +382,7 @@
   
   <div class="footer">    
       <!-- Caught a mistake or want to contribute to the documentation?
-	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/playground/index.md" target="_blank">
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/preview/index.md" target="_blank">
 	   Edit this page on GitHub!
 	   </a> -->
   </div>
