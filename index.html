@@ -177,20 +177,45 @@
      padding: 20px;
      margin: 0 20px;
  }
+
+ .img-car {
+ width: 600px;
+ }
+ 
+ .subscribe {
+ width: 600px;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ height: 400px;
+ align-items: center;
+ margin: 0 auto;
+ }
  
  @media screen and (max-width: 900px) {
 
+ .img-car {
+ width: 100%;
+ }
+ 
+ .subscribe {
+ width: auto;
+ margin-left: 2em;
+ margin-right: 2em;
+ }
+
+ 
  .cards {
  flex-direction: column;
  }
 
  .card {
- width: 90%;
  margin-bottom: 2em;
  }
  
  .quickstart-row {
  flex-direction: column;
+ padding-top: 60px;
  }
 
  .images-carousel {
@@ -243,7 +268,7 @@
         
         <section class="quickstart-row" style>
           <div class="images-carousel">
-            <img src="/images/screens/screely-1569182764991.png" width="600">
+            <img src="/images/screens/screely-1569182764991.png" class="img-car">
           </div>
           <div style="margin-left: 2em; margin-right: 2em;">
             <h1>Quickstart</h1>
@@ -275,12 +300,12 @@
           </div>                    
         </section>
 
-        <section style="display: flex; justify-content: center; height: 400px; align-items: center;">
+        <section class="subscribe">
           
           <div style="text-align: center;">
             <img src="/images/paper-plane.svg" alt="label studio logo" height="64">
             <h3>Subscribe for the updates</h3>
-            <div style="width: 600px; text-align: center;">
+            <div>
               <p>We send a periodic newsletter announcing new features as well as some ML-related papers, label techniques that are innovative and funny stories.</p>
             </div>
             <!-- Begin Mailchimp Signup Form -->
