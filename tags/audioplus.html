@@ -305,7 +305,39 @@
 
       
     <li>
+      <a href="/tags/keypoint.html" class="sidebar-link">KeyPoint</a>
+    </li>
+    
+    
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
       <a href="/tags/rectangle.html" class="sidebar-link">Rectangle</a>
+    </li>
+    
+    
+      
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/keypointlabels.html" class="sidebar-link">KeypointLabels</a>
     </li>
     
     
@@ -440,18 +472,21 @@
   
     <h1>AudioPlus</h1>
     
-  <p>AudioPlus tag plays audio and shows its wave</p>
+  <p>AudioPlus tag plays the audio and shows its wave making it available for region tagging</p>
 <h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><ul>
 <li><code>name</code> <strong>[string]</strong> of the element</li>
 <li><code>value</code> <strong>[string]</strong> of the element</li>
-<li><code>hasZoom</code> <strong>[boolean]</strong> speficy if audio has zoom functionality</li>
-<li><code>regionBG</code> <strong>[string]</strong> region color</li>
-<li><code>selectedRegionBG</code> <strong>[string]</strong> selected region background</li>
+<li><code>zoom</code> <strong>[boolean]</strong> show the zoom slider (optional, default <code>true</code>)</li>
+<li><code>volume</code> <strong>[boolean]</strong> show the volume slider (optional, default <code>true</code>)</li>
+<li><code>speed</code> <strong>[boolean]</strong> show the speed slider (optional, default <code>true</code>)</li>
 </ul>
 <h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">Labels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lbl-1"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"audio-1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Hello"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"World"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Labels</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">Rating</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"rate-1"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"audio-1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Rating</span>&gt;</span>
- <span class="hljs-tag">&lt;<span class="hljs-name">AudioPlus</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"audio-1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$audio"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">AudioPlus</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Labels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lbl-1"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"audio-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Hello"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"World"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Labels</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Rating</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"rate-1"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"audio-1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Rating</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">AudioPlus</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"audio-1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$audio"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">AudioPlus</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
 
 

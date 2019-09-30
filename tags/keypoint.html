@@ -3,18 +3,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head><meta name="generator" content="Hexo 3.9.0">
-      <title>Image — Label Studio</title>
+      <title>KeyPoint — Label Studio</title>
       <meta charset="utf-8">
       <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <meta property="og:type" content="article">
-      <meta property="og:title" content="Image — Label Studio">
+      <meta property="og:title" content="KeyPoint — Label Studio">
       <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
       <meta property="og:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
 
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:title" content="Image — Label Studio">
+      <meta name="twitter:title" content="KeyPoint — Label Studio">
       <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
       <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
 
@@ -175,7 +175,7 @@
 
       
     <li>
-      <a href="/tags/image.html" class="sidebar-link current">Image</a>
+      <a href="/tags/image.html" class="sidebar-link">Image</a>
     </li>
     
     
@@ -305,7 +305,7 @@
 
       
     <li>
-      <a href="/tags/keypoint.html" class="sidebar-link">KeyPoint</a>
+      <a href="/tags/keypoint.html" class="sidebar-link current">KeyPoint</a>
     </li>
     
     
@@ -470,34 +470,26 @@
     
   
   
-    <h1>Image</h1>
+    <h1>KeyPoint</h1>
     
-  <p>Image tag shows an image on the page</p>
+  <p>KeyPoint is used to add a keypoint to an image</p>
 <h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><ul>
 <li><code>name</code> <strong>[string]</strong> name of the element</li>
-<li><code>value</code> <strong>[string]</strong> value</li>
-<li><code>width</code> <strong>[string]</strong> image width (optional, default <code>100%</code>)</li>
-<li><code>maxWidth</code> <strong>[string]</strong> image maximum width (optional, default <code>750px</code>)</li>
-<li><code>zoom</code> <strong>[boolean]</strong> enable zooming an image by the mouse wheel (optional, default <code>false</code>)</li>
-<li><code>negativeZoom</code> <strong>[boolean]</strong>  enable zooming out an image (optional, default <code>false</code>)</li>
-<li><code>zoomBy</code> <strong>[float]</strong> scale factor (optional, default <code>1.1</code>)</li>
-<li><code>grid</code> <strong>[boolean]</strong> show grid (optional, default <code>false</code>)</li>
-<li><code>gridSize</code> <strong>[number]</strong> size of the grid (optional, default <code>30</code>)</li>
-<li><code>gridColor</code> <strong>[string]</strong> color of the grid, opacity is 0.15 (optional, default <code>#EEEEF4</code>)</li>
+<li><code>toname</code> <strong>[string]</strong> name of the image to label</li>
+<li><code>opacity</code> <strong>float</strong> opacity of rectangle (optional, default <code>0.9</code>)</li>
+<li><code>fillColor</code> <strong>[string]</strong> keypoint fill color (optional, default <code>8bad00</code>)</li>
+<li><code>strokeWidth</code> <strong>[number]</strong> width of the stroke (optional, default <code>1</code>)</li>
 </ul>
 <h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$url"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Image</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
-
-<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"https://imgflip.com/s/meme/Leonardo-Dicaprio-Cheers.jpg"</span> <span class="hljs-attr">zoom</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">grid</span>=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Image</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">KeyPoint</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"rect-1"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"img-1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">KeyPoint</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"img-1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$img"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Image</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
 
 
   
   <div class="footer">    
       <!-- Caught a mistake or want to contribute to the documentation?
-	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/tags/image.md" target="_blank">
+	   <a href="https://github.com/heartexlabs/label-studio/blob/master/src/tags/keypoint.md" target="_blank">
 	   Edit this page on GitHub!
 	   </a> -->
   </div>
