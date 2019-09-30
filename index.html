@@ -49,38 +49,7 @@
     </div>
     
     
-        <div id="header" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 3px 0px;">
-    <a id="logo" href="/">
-        <img src="/images/ls_logo.png" alt="label studio logo">
-        <span>Label Studio</span>
-    </a>
-    <ul id="nav" style="display: flex; align-items: center">
-        
-
-<a style="margin-right: 1em;" href="/guide">Guide</a>
-
-
-
-<a style="margin-right: 1em;" href="/tags">Tags</a>
-
-
-
-<a style="margin-right: 1em;" href="/templates">Templates</a>
-
-
-
-<a style="margin-right: 1em;" href="/playground">Playground</a>
-
-
-<!-- Place this tag where you want the button to render. -->
-<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
-
-
-
-    </ul>
-</div>
-
-<style>
+        <style>
  .btn {
      line-height: 1.5;
      position: relative;
@@ -191,9 +160,21 @@
  align-items: center;
  margin: 0 auto;
  }
+
+ .tagline {
+ display: flex;
+ }
  
  @media screen and (max-width: 900px) {
 
+ .tagline-text {
+   text-align: center;
+ }
+ 
+ .tagline {
+ flex-direction: column;
+ }
+ 
  .img-car {
  width: 100%;
  }
@@ -238,17 +219,112 @@
  
 </style>
 
+<div id="header" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 3px 0px;">
+    <a id="logo" href="/">
+        <img src="/images/ls_logo.png" alt="label studio logo">
+        <span>Label Studio</span>
+    </a>
+    <ul id="nav" style="display: flex; align-items: center">
+        
+
+<a style="margin-right: 1em;" href="/guide">Guide</a>
+
+
+
+<a style="margin-right: 1em;" href="/tags">Tags</a>
+
+
+
+<a style="margin-right: 1em;" href="/templates">Templates</a>
+
+
+
+<a style="margin-right: 1em;" href="/playground">Playground</a>
+
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
+
+    </ul>
+</div>
+
 <body>
-  <div>
+  <div class="fix-sidebar">
+    
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <ul class="main-menu">
+      
+
+<a style="margin-right: 1em;" href="/guide">Guide</a>
+
+
+
+<a style="margin-right: 1em;" href="/tags">Tags</a>
+
+
+
+<a style="margin-right: 1em;" href="/templates">Templates</a>
+
+
+
+<a style="margin-right: 1em;" href="/playground">Playground</a>
+
+
+<!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub">Star</a>
+
+
+
+    </ul>
+    <div class="list">
+      <ul class="menu-root">
+  
+    
+      
+
+      
+    <li>
+      <a href="/index.html" class="sidebar-link current"></a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/tags/list.html" class="sidebar-link current"></a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/tags/ranker.html" class="sidebar-link current"></a>
+    </li>
+    
+
+  <li style="position: absolute; bottom: 20px;">
+    <img src="/images/opossum/other/5.svg" alt="label studio logo" height="120">
+  </li>
+</ul>
+
+    </div>
+  </div>
+</div>
+
     <div>
       <div id="bodybag">
         <section style="background-color: #fffaff;">
           <div style="position: relative; padding-top: 100px; padding-bottom: 100px;">
             <div style="display: flex; justify-content: center;">
               <div style="display: flex; flex-direction: column; align-items: center;">
-                <div style="display: flex;">
+                <div class="tagline">
                   <img src="/images/opossum/heartex_icon_opossum_green.svg" alt="label studio logo" height="180">
-                  <div>
+                  <div class="tagline-text">
                     <h1 style="font-size: 2em;">Open-source<br>data labeling, annotation<br> and exploration tool<br></h1>
                   </div>
                 </div>
