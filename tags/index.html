@@ -369,7 +369,7 @@
 
       
     <li>
-      <a href="/tags/textarea.html" class="sidebar-link">TextArea</a>
+      <a href="/tags/rating.html" class="sidebar-link">Rating</a>
     </li>
     
     
@@ -385,7 +385,7 @@
 
       
     <li>
-      <a href="/tags/rating.html" class="sidebar-link">Rating</a>
+      <a href="/tags/textarea.html" class="sidebar-link">TextArea</a>
     </li>
     
     
@@ -496,6 +496,24 @@
 
 <p>And the example data you need to load into the studio looks like this:</p>
 <pre><code class="hljs js">&#123; <span class="hljs-string">"header"</span>: <span class="hljs-string">"This is a header"</span>, <span class="hljs-string">"value"</span>: <span class="hljs-string">"This is the text"</span> &#125;</code></pre>
+
+<h2 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h2><p>Since <code>View</code> tag supports CSS styles, you can thoroughly configure the visual representation. Here is an example of a two-column labeling interface with multiple control and object elements:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: flex;"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 50%"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choose:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt-1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choices</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"chc"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt-1"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choice 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choice 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Choices</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span> 
+  <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 50%; margin-left: 1em"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Enter your question and rate text:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt-2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Rating</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"rating"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Rating</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">TextArea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"question"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">TextArea</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
 
 
   

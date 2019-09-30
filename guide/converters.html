@@ -124,22 +124,6 @@
 
       
     <li>
-      <a href="/guide/format.html" class="sidebar-link">Format</a>
-    </li>
-    
-    
-      
-
-      
-    <li>
-      <a href="/guide/converters.html" class="sidebar-link current">Converters</a>
-    </li>
-    
-    
-      
-
-      
-    <li>
       <a href="/guide/build.html" class="sidebar-link">Build</a>
     </li>
     
@@ -156,7 +140,15 @@
 
       
     <li>
-      <a href="/guide/embed.html" class="sidebar-link">Embed</a>
+      <a href="/guide/converters.html" class="sidebar-link current">Converters</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/format.html" class="sidebar-link">Format</a>
     </li>
     
     
@@ -185,8 +177,8 @@
   
     <h1>Converters</h1>
     
-  <p>Label Studio Format Converter helps you to encode labels into the format of your favorite machine learning library.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>Running from the command line:</p>
+  <p>Label Studio Format Converter helps you to encode labels into the format of your favorite machine learning library. It takes the resulting completions as input and produces encodes that into a specified format.</p>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/sentiment_analysis/completions/ --config examples/sentiment_analysis/config.xml --output tmp/output.json</code></pre>
 
 <p>Running from python:</p>
@@ -212,7 +204,7 @@ c.convert_to_json(<span class="hljs-string">'examples/sentiment_analysis/complet
 ]</code></pre>
 
 <p>Use cases: any tasks</p>
-<h4 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h4><p>Running from the command line:</p>
+<h3 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/sentiment_analysis/completions/ --config examples/sentiment_analysis/config.xml --output tmp/output.tsv --format CSV --csv-separator $<span class="hljs-string">'\t'</span></code></pre>
 
 <p>Running from python:</p>
@@ -228,7 +220,7 @@ What a waste of money and time!	Negative
 The goose neck needs a little coaxing	Neutral</code></pre>
 
 <p>Use cases: any tasks</p>
-<h4 id="CoNLL-2003"><a href="#CoNLL-2003" class="headerlink" title="CoNLL 2003"></a>CoNLL 2003</h4><p>Running from the command line:</p>
+<h3 id="CoNLL-2003"><a href="#CoNLL-2003" class="headerlink" title="CoNLL 2003"></a>CoNLL 2003</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/named_entity/completions/ --config examples/named_entity/config.xml --output tmp/output.conll --format CONLL2003</code></pre>
 
 <p>Running from python:</p>
@@ -252,7 +244,7 @@ zone, -X- _ O
 ...</code></pre>
 
 <p>Use cases: text tagging</p>
-<h4 id="COCO"><a href="#COCO" class="headerlink" title="COCO"></a>COCO</h4><p>Running from the command line:</p>
+<h3 id="COCO"><a href="#COCO" class="headerlink" title="COCO"></a>COCO</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/image_bbox/completions/ --config examples/image_bbox/config.xml --output tmp/output.json --format COCO --image-dir tmp/images</code></pre>
 
 <p>Running from python:</p>
@@ -322,7 +314,7 @@ c.convert_to_coco(<span class="hljs-string">'examples/image_bbox/completions/'</
 &#125;</code></pre>
 
 <p>Use cases: image object detection</p>
-<h4 id="Pascal-VOC-XML"><a href="#Pascal-VOC-XML" class="headerlink" title="Pascal VOC XML"></a>Pascal VOC XML</h4><p>Running from the command line:</p>
+<h3 id="Pascal-VOC-XML"><a href="#Pascal-VOC-XML" class="headerlink" title="Pascal VOC XML"></a>Pascal VOC XML</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/image_bbox/completions/ --config examples/image_bbox/config.xml --output tmp/voc-annotations --format VOC --image-dir tmp/images</code></pre>
 
 <p>Running from python:</p>
@@ -385,11 +377,11 @@ c.convert_to_voc(<span class="hljs-string">'examples/image_bbox/completions/'</s
     <div class="guide-links">
       
       
-        <span>← <a href="/guide/format.html">Format</a></span>
+        <span>← <a href="/guide/backend.html">Backend</a></span>
       
       
       
-        <span style="float: right;"><a href="/guide/build.html">Build</a> →</span>
+        <span style="float: right;"><a href="/guide/configuration.html">UI Configuration</a> →</span>
       
     </div>
   
