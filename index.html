@@ -171,14 +171,15 @@
  }
 
  .quickstart {
-   margin-left: 2em;
+   margin-left: 4em;
    margin-right: 2em;
  }
  
  @media screen and (max-width: 900px) {
 
  .quickstart {
- margin-top: 4em;
+
+ margin-left: 2em;
  }
  
  
@@ -246,10 +247,14 @@
   display: none;
 }
 
-.slider, .slider-wrapper {
+.slider {
   position: relative;
   height: 392px;
   width: 760px;
+  }
+
+  .slider-wrapper {
+  position: relative;
 }
 
 .slide {
@@ -328,11 +333,17 @@
 
 
  @media screen and (max-width: 900px) {
-  .slider, .slider-wrapper {
+  .slider {
   width: 90%;
   margin-left: 2em;
   margin-right: 2em;
   height: 300px;
+  }
+
+  .slider-wrapper {
+  width: 100%;
+  
+
     }
   }
 
