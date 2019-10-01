@@ -124,22 +124,6 @@
 
       
     <li>
-      <a href="/guide/format.html" class="sidebar-link">Format</a>
-    </li>
-    
-    
-      
-
-      
-    <li>
-      <a href="/guide/converters.html" class="sidebar-link current">Converters</a>
-    </li>
-    
-    
-      
-
-      
-    <li>
       <a href="/guide/build.html" class="sidebar-link">Build</a>
     </li>
     
@@ -149,6 +133,22 @@
       
     <li>
       <a href="/guide/backend.html" class="sidebar-link">Backend</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/format.html" class="sidebar-link">Format</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/converters.html" class="sidebar-link current">Converters</a>
     </li>
     
     
@@ -177,8 +177,8 @@
   
     <h1>Converters</h1>
     
-  <p>Label Studio Format Converter helps you to encode labels into the format of your favorite machine learning library.</p>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>Running from the command line:</p>
+  <p>Label Studio Format Converter helps you to encode labels into the format of your favorite machine learning library. It takes the resulting completions as input and produces encodes that into a specified format.</p>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/sentiment_analysis/completions/ --config examples/sentiment_analysis/config.xml --output tmp/output.json</code></pre>
 
 <p>Running from python:</p>
@@ -203,24 +203,39 @@ c.convert_to_json(<span class="hljs-string">'examples/sentiment_analysis/complet
   &#125;
 ]</code></pre>
 
-<p>Use cases: any tasks</p>
-<h4 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h4><p>Running from the command line:</p>
-<pre><code class="hljs bash">python backend/converter/cli.py --input examples/sentiment_analysis/completions/ --config examples/sentiment_analysis/config.xml --output tmp/output.tsv --format CSV --csv-separator $<span class="hljs-string">'\t'</span></code></pre>
+<h3 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h3><p>Running from the command line:</p>
+<pre><code class="hljs bash">python backend/converter/cli.py --input examples/sentiment_analysis/completions/ --config examples/sentiment_analysis/config.xml --output tmp/output.tsv --format CSV --csv-separator $<span class="hljs-string">'\t'</span>
+=======
+<span class="hljs-comment">#### JSON</span>
+
+Running from the <span class="hljs-built_in">command</span> line:
+```bash
+python backend/converter/cli.py --input examples/sentiment_analysis/completions/ --config examples/sentiment_analysis/config.xml --output tmp/output.json</code></pre>
 
 <p>Running from python:</p>
 <pre><code class="hljs python"><span class="hljs-keyword">from</span> converter <span class="hljs-keyword">import</span> Converter
 
 c = Converter(<span class="hljs-string">'examples/sentiment_analysis/config.xml'</span>)
-c.convert_to_csv(<span class="hljs-string">'examples/sentiment_analysis/completions/'</span>, <span class="hljs-string">'tmp/output.tsv'</span>, sep=<span class="hljs-string">'\t'</span>, header=<span class="hljs-literal">True</span>)</code></pre>
+c.convert_to_json(<span class="hljs-string">'examples/sentiment_analysis/completions/'</span>, <span class="hljs-string">'tmp/output.json'</span>)</code></pre>
 
-<p>Getting output file <code>tmp/output.tsv</code>:</p>
-<pre><code class="hljs tsv">reviewText	sentiment
-Good case, Excellent value.	Positive
-What a waste of money and time!	Negative
-The goose neck needs a little coaxing	Neutral</code></pre>
+<p>Getting output file: <code>tmp/output.json</code></p>
+<pre><code class="hljs json">[
+  &#123;
+    <span class="hljs-attr">"reviewText"</span>: <span class="hljs-string">"Good case, Excellent value."</span>,
+    <span class="hljs-attr">"sentiment"</span>: <span class="hljs-string">"Positive"</span>
+  &#125;,
+  &#123;
+    <span class="hljs-attr">"reviewText"</span>: <span class="hljs-string">"What a waste of money and time!"</span>,
+    <span class="hljs-attr">"sentiment"</span>: <span class="hljs-string">"Negative"</span>
+  &#125;,
+  &#123;
+    <span class="hljs-attr">"reviewText"</span>: <span class="hljs-string">"The goose neck needs a little coaxing"</span>,
+    <span class="hljs-attr">"sentiment"</span>: <span class="hljs-string">"Neutral"</span>
+  &#125;
+]</code></pre>
 
 <p>Use cases: any tasks</p>
-<h4 id="CoNLL-2003"><a href="#CoNLL-2003" class="headerlink" title="CoNLL 2003"></a>CoNLL 2003</h4><p>Running from the command line:</p>
+<h3 id="CoNLL-2003"><a href="#CoNLL-2003" class="headerlink" title="CoNLL 2003"></a>CoNLL 2003</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/named_entity/completions/ --config examples/named_entity/config.xml --output tmp/output.conll --format CONLL2003</code></pre>
 
 <p>Running from python:</p>
@@ -244,7 +259,7 @@ zone, -X- _ O
 ...</code></pre>
 
 <p>Use cases: text tagging</p>
-<h4 id="COCO"><a href="#COCO" class="headerlink" title="COCO"></a>COCO</h4><p>Running from the command line:</p>
+<h3 id="COCO"><a href="#COCO" class="headerlink" title="COCO"></a>COCO</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/image_bbox/completions/ --config examples/image_bbox/config.xml --output tmp/output.json --format COCO --image-dir tmp/images</code></pre>
 
 <p>Running from python:</p>
@@ -314,74 +329,41 @@ c.convert_to_coco(<span class="hljs-string">'examples/image_bbox/completions/'</
 &#125;</code></pre>
 
 <p>Use cases: image object detection</p>
-<h4 id="Pascal-VOC-XML"><a href="#Pascal-VOC-XML" class="headerlink" title="Pascal VOC XML"></a>Pascal VOC XML</h4><p>Running from the command line:</p>
+<h3 id="Pascal-VOC-XML"><a href="#Pascal-VOC-XML" class="headerlink" title="Pascal VOC XML"></a>Pascal VOC XML</h3><p>Running from the command line:</p>
 <pre><code class="hljs bash">python backend/converter/cli.py --input examples/image_bbox/completions/ --config examples/image_bbox/config.xml --output tmp/voc-annotations --format VOC --image-dir tmp/images</code></pre>
 
 <p>Running from python:</p>
 <pre><code class="hljs python"><span class="hljs-keyword">from</span> converter <span class="hljs-keyword">import</span> Converter
 
-c = Converter(<span class="hljs-string">'examples/image_bbox/config.xml'</span>)
-c.convert_to_voc(<span class="hljs-string">'examples/image_bbox/completions/'</span>, <span class="hljs-string">'tmp/output.conll'</span>, output_image_dir=<span class="hljs-string">'tmp/images'</span>)</code></pre>
+=======
+c = Converter(<span class="hljs-string">'examples/named_entity/config.xml'</span>)
+c.convert_to_conll2003(<span class="hljs-string">'examples/named_entity/completions/'</span>, <span class="hljs-string">'tmp/output.conll'</span>)</code></pre>
 
-<p>Output images can be found in <code>tmp/images</code></p>
-<p>Corresponding annotations could be found in <code>tmp/voc-annotations/*.xml</code>:</p>
-<pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">annotation</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">folder</span>&gt;</span>tmp/images<span class="hljs-tag">&lt;/<span class="hljs-name">folder</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">filename</span>&gt;</span>62a623a0d3cef27a51d3689865e7b08a<span class="hljs-tag">&lt;/<span class="hljs-name">filename</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">source</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">database</span>&gt;</span>MyDatabase<span class="hljs-tag">&lt;/<span class="hljs-name">database</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">annotation</span>&gt;</span>COCO2017<span class="hljs-tag">&lt;/<span class="hljs-name">annotation</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">image</span>&gt;</span>flickr<span class="hljs-tag">&lt;/<span class="hljs-name">image</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">flickrid</span>&gt;</span>NULL<span class="hljs-tag">&lt;/<span class="hljs-name">flickrid</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">source</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">owner</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">flickrid</span>&gt;</span>NULL<span class="hljs-tag">&lt;/<span class="hljs-name">flickrid</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Label Studio<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">owner</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">size</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">width</span>&gt;</span>800<span class="hljs-tag">&lt;/<span class="hljs-name">width</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">height</span>&gt;</span>501<span class="hljs-tag">&lt;/<span class="hljs-name">height</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">depth</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">depth</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">size</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">segmented</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">segmented</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">object</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Planet<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">pose</span>&gt;</span>Unspecified<span class="hljs-tag">&lt;/<span class="hljs-name">pose</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">truncated</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">truncated</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">difficult</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">difficult</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">bndbox</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">xmin</span>&gt;</span>299<span class="hljs-tag">&lt;/<span class="hljs-name">xmin</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ymin</span>&gt;</span>6<span class="hljs-tag">&lt;/<span class="hljs-name">ymin</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">xmax</span>&gt;</span>676<span class="hljs-tag">&lt;/<span class="hljs-name">xmax</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ymax</span>&gt;</span>266<span class="hljs-tag">&lt;/<span class="hljs-name">ymax</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">bndbox</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">object</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>Moonwalker<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">pose</span>&gt;</span>Unspecified<span class="hljs-tag">&lt;/<span class="hljs-name">pose</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">truncated</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">truncated</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">difficult</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">difficult</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">bndbox</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">xmin</span>&gt;</span>288<span class="hljs-tag">&lt;/<span class="hljs-name">xmin</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ymin</span>&gt;</span>300<span class="hljs-tag">&lt;/<span class="hljs-name">ymin</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">xmax</span>&gt;</span>420<span class="hljs-tag">&lt;/<span class="hljs-name">xmax</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">ymax</span>&gt;</span>390<span class="hljs-tag">&lt;/<span class="hljs-name">ymax</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">bndbox</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">object</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">annotation</span>&gt;</span></code></pre>
+<p>Getting output file <code>tmp/output.conll</code></p>
+<pre><code class="hljs text">-DOCSTART- -X- O
+Showers -X- _ O
+continued -X- _ O
+throughout -X- _ O
+the -X- _ O
+week -X- _ O
+in -X- _ O
+the -X- _ O
+Bahia -X- _ B-Location
+cocoa -X- _ O
+zone, -X- _ O
+...</code></pre>
 
-<p>Use cases: image object detection</p>
+<p>Use cases: text tagging</p>
 
   
     <div class="guide-links">
       
       
-        <span>← <a href="/guide/format.html">Format</a></span>
+        <span>← <a href="/guide/backend.html">Backend</a></span>
       
       
       
-        <span style="float: right;"><a href="/guide/build.html">Build</a> →</span>
+        <span style="float: right;"><a href="/guide/configuration.html">UI Configuration</a> →</span>
       
     </div>
   

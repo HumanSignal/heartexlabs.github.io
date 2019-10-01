@@ -396,12 +396,8 @@ body.docs #nav {
   position: relative;
   margin: 0 0.6em;
 }
-#nav span {
-  font-weight: bold;
-}
-#nav a:hover,
-#nav a.current {
-  border-bottom: 2px solid #f58a48;
+#nav a {
+  text-decoration: underline;
 }
 #nav .nav-dropdown .nav-link:hover,
 #nav .nav-dropdown .nav-link.current {
