@@ -124,15 +124,7 @@
 
       
     <li>
-      <a href="/guide/build.html" class="sidebar-link">Build</a>
-    </li>
-    
-    
-      
-
-      
-    <li>
-      <a href="/guide/backend.html" class="sidebar-link">Backend</a>
+      <a href="/guide/format.html" class="sidebar-link">Format</a>
     </li>
     
     
@@ -148,7 +140,15 @@
 
       
     <li>
-      <a href="/guide/format.html" class="sidebar-link">Format</a>
+      <a href="/guide/build.html" class="sidebar-link">Build</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/backend.html" class="sidebar-link">Backend</a>
     </li>
     
     
@@ -177,19 +177,47 @@
   
     <h1>UI Configuration</h1>
     
-  <p>UI configuration is based on XML-like tags, which internally are mapped into the associated React classes. Tags can be divided into three categories:</p>
+  <h2 id="Tags"><a href="#Tags" class="headerlink" title="Tags"></a>Tags</h2><p>Editor configuration is based on XML-like tags. Tags can be divided into three categories:</p>
 <ul>
 <li>Visual tags used for visual only elements<br>(non-interactive), examples: <strong>View</strong>, <strong>Header</strong>. </li>
 <li>Control tags used to label the objects, examples: <strong>Labels</strong>, <strong>Choices</strong>, <strong>Rating</strong>, <strong>TextArea</strong>. </li>
 <li>Object tags used to show elements that can be labeled: <strong>Image</strong>, <strong>Text</strong>, <strong>Audio</strong>, <strong>AudioPlus</strong>.</li>
 </ul>
 <p><a class="button" href="/tags/">Explore Tags</a></p>
+<h2 id="Connecting-elements"><a href="#Connecting-elements" class="headerlink" title="Connecting elements"></a>Connecting elements</h2><p>The <strong>name</strong> attribute is mandatory for all control and object tags. Also, each control tag should have <strong>toName</strong> attribute that should match the <strong>name</strong> parameter in the object element. For example:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Labels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"lbl"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Label 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Label 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Label</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Labels</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+<p>Note that in the case above, Label tags are used to label Text tag. There could be multiple control, and object tags in the same configuration, and names are used to connect them.</p>
+<h2 id="Styles"><a href="#Styles" class="headerlink" title="Styles"></a>Styles</h2><p>Here is an example of two-column labeling interface with multiple control and object elements:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"display: flex;"</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 50%"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choose:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt-1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Choices</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"chc"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt-1"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choice 1"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Choice 2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Choice</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Choices</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span> 
+ <span class="hljs-tag">&lt;<span class="hljs-name">View</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"flex: 50%; margin-left: 1em"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Header</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Enter your question and rate text:"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"txt-2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$value"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Text</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Rating</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"rating"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"txt-2"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">Rating</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">TextArea</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"question"</span> &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">TextArea</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
 
   
     <div class="guide-links">
       
       
-        <span>← <a href="/guide/converters.html">Converters</a></span>
+        <span>← <a href="/guide/backend.html">Backend</a></span>
       
       
       

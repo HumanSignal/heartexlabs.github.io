@@ -124,15 +124,7 @@
 
       
     <li>
-      <a href="/guide/build.html" class="sidebar-link current">Build</a>
-    </li>
-    
-    
-      
-
-      
-    <li>
-      <a href="/guide/backend.html" class="sidebar-link">Backend</a>
+      <a href="/guide/format.html" class="sidebar-link">Format</a>
     </li>
     
     
@@ -148,7 +140,15 @@
 
       
     <li>
-      <a href="/guide/format.html" class="sidebar-link">Format</a>
+      <a href="/guide/build.html" class="sidebar-link current">Build</a>
+    </li>
+    
+    
+      
+
+      
+    <li>
+      <a href="/guide/backend.html" class="sidebar-link">Backend</a>
     </li>
     
     
@@ -183,13 +183,13 @@
 npm install</code></pre>
 
 <p>Now you can make any changes to the code or add your custom tags.</p>
-<h2 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h2><pre><code class="hljs bash">npm run start</code></pre>
+<h2 id="Run-a-development-build"><a href="#Run-a-development-build" class="headerlink" title="Run a development build"></a>Run a development build</h2><pre><code class="hljs bash">npm run start</code></pre>
 
 <p>And open your browser at <a href="http://localhost:3000" target="_blank" rel="noopener">http://localhost:3000</a></p>
 <p>A good introduction point is to study <code>src/env/development.js</code>. That file defines a labeling config for the studio as well as creates the environment.</p>
-<h2 id="Production"><a href="#Production" class="headerlink" title="Production"></a>Production</h2><pre><code class="hljs bash">npm run publish</code></pre>
+<h2 id="Run-a-production-build"><a href="#Run-a-production-build" class="headerlink" title="Run a production build"></a>Run a production build</h2><pre><code class="hljs bash">npm run publish</code></pre>
 
-<p>Generates the compiled version of label studio. Output files are store in <code>build</code>. This compiled version needs to be included in your app. For an example on how to include the files checkout the <code>backend/server.py</code> file <code>index</code> method.</p>
+<p>Generates the compiled version of label studio. This compiled version needs to be included in your app.</p>
 <h2 id="Embed"><a href="#Embed" class="headerlink" title="Embed"></a>Embed</h2><p>The easiest way to embed Label Studio into your application is to re-use the initialization code from <code>backend/templates/index.html</code>. </p>
 <h2 id="Extend"><a href="#Extend" class="headerlink" title="Extend"></a>Extend</h2><pre><code class="hljs undefined">TBD</code></pre>
 
@@ -198,7 +198,7 @@ npm install</code></pre>
     <div class="guide-links">
       
       
-        <span>← <a href="/guide/index.html">Introduction</a></span>
+        <span>← <a href="/guide/converters.html">Converters</a></span>
       
       
       
