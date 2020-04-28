@@ -1,0 +1,403 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Frontend reference — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Frontend reference — Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Frontend reference — Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class="current">Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="list">
+      <ul class="menu-root">
+    <li><h3 class="root">guide</h3></li>
+
+  
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/index.html" class="sidebar-link">Getting started</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/tasks.html" class="sidebar-link">Import tasks</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/setup.html" class="sidebar-link">Project setup</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/labeling.html" class="sidebar-link">Labeling</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/completions.html" class="sidebar-link">Export results</a>
+    </li>
+    
+    
+
+
+      
+          <li><h4>Advanced usage</h4></li>
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend.html" class="sidebar-link">Frontend library</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend_reference.html" class="sidebar-link current">Frontend reference</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/ml.html" class="sidebar-link">Machine learning backend</a>
+    </li>
+    
+</ul>
+
+    </div>
+  </div>
+  <a href="/"><img src="/images/opossum/other/5.svg" alt="label studio logo" height="120"></a>
+</div>
+
+
+
+<div class="content guide with-sidebar frontend_reference-guide">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+    
+  
+  
+    <h1>Frontend reference</h1>
+  
+  <pre><code class="hljs javascript"><span class="hljs-keyword">var</span> labelStudio = <span class="hljs-keyword">new</span> LabelStudio(<span class="hljs-string">'editor'</span>, options);</code></pre>
+
+<p>The following options are recognized when initializing <strong>LabelStudio</strong> instance:</p>
+<h2 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h2><h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><p>Default: <code>null</code></p>
+<p>Type data: <code>string</code></p>
+<p>XML configuration of task. Whitelist of formats to allow in the editor.</p>
+<h3 id="interfaces"><a href="#interfaces" class="headerlink" title="interfaces"></a>interfaces</h3><p>Default: <code>null</code></p>
+<p>Type data: <code>array</code></p>
+<p>Collection of UI elements to show:</p>
+<pre><code class="hljs javascript">[
+    <span class="hljs-string">"completions:add-new"</span>,
+    <span class="hljs-string">"completions:delete"</span>,
+    <span class="hljs-string">"completions:menu"</span>,
+    <span class="hljs-string">"controls"</span>,
+    <span class="hljs-string">"panel"</span>,
+    <span class="hljs-string">"predictions:menu"</span>,
+    <span class="hljs-string">"side-column"</span>,
+    <span class="hljs-string">"skip"</span>,
+    <span class="hljs-string">"submit"</span>
+    <span class="hljs-string">"update"</span>,
+]</code></pre>
+
+<ul>
+<li><code>completions:add-new</code> - show add new completions button</li>
+<li><code>completions:delete</code> - show delete current completion button</li>
+<li><code>completions:menu</code> - show completions menu</li>
+<li><code>controls</code> - enable panel with controls (submit, update, skip)</li>
+<li><code>panel</code> - navigation panel of current task with buttons: undo, redo and reset</li>
+<li><code>predictions:menu</code> - show predictions menu</li>
+<li><code>side-column</code> - enable panel with entities</li>
+<li><code>skip</code> - show button of skip current task</li>
+<li><code>submit</code> - show button of submit or update current completion</li>
+<li><code>update</code> - show button of update current task after submitting</li>
+</ul>
+<h3 id="messages"><a href="#messages" class="headerlink" title="messages"></a>messages</h3><p>Default: <code>null</code></p>
+<p>Type data: <code>object</code></p>
+<p>Messaging used for different actions</p>
+<pre><code class="hljs javascript">&#123;
+  <span class="hljs-attr">DONE</span>: <span class="hljs-string">"Done!"</span>,
+  <span class="hljs-attr">NO_COMP_LEFT</span>: <span class="hljs-string">"No more completions"</span>,
+  <span class="hljs-attr">NO_NEXT_TASK</span>: <span class="hljs-string">"No more data available for labeling"</span>,
+  <span class="hljs-attr">NO_ACCESS</span>: <span class="hljs-string">"You don't have access to this task"</span>
+&#125;</code></pre>
+
+<ul>
+<li><code>DONE</code> - Shown after the task was submitted to the server</li>
+<li><code>NO_COMP_LEFT</code> - Shown if there are no more completions</li>
+<li><code>NO_NEXT_TASK</code> - No next task to load</li>
+<li><code>NO_ACCESS</code> - Can’t access the provided task</li>
+</ul>
+<h3 id="description"><a href="#description" class="headerlink" title="description"></a>description</h3><p>Default: <code>No description</code></p>
+<p>Type data: <code>string</code></p>
+<p>Description of the current task.</p>
+<h3 id="task"><a href="#task" class="headerlink" title="task"></a>task</h3><p>Task data</p>
+<p>Default: <code>null</code></p>
+<p>Type data: <code>object</code></p>
+<pre><code class="hljs json">&#123;
+  id: 1,
+  load: false,
+  auth: &#123;
+    enable: true,
+    to: "text",
+    username: "user",
+    password: "pass"
+  &#125;,
+  data: &#123;
+    text: "Labeling text..."
+  &#125;,
+  completions: [],
+  predictions: [],
+&#125;</code></pre>
+
+<h4 id="id"><a href="#id" class="headerlink" title="id"></a>id</h4><p>Type data: <code>integer</code></p>
+<p>Default: <code>null</code></p>
+<h4 id="data"><a href="#data" class="headerlink" title="data"></a>data</h4><h4 id="completions"><a href="#completions" class="headerlink" title="completions"></a>completions</h4><p>Type data: <code>array</code></p>
+<p>Array of completions. See <a href="format.html#Input">Completions Documentation</a> for more information.</p>
+<h4 id="predictions"><a href="#predictions" class="headerlink" title="predictions"></a>predictions</h4><p>Type data: <code>array</code></p>
+<p>Array of predictions. Every object as completion. See <a href="https://labelstud.io/guide/format.html#Input">Completions Documentation</a> for more information.</p>
+<h3 id="user"><a href="#user" class="headerlink" title="user"></a>user</h3><p>User data</p>
+<p>Type data: <code>object</code></p>
+<pre><code class="hljs json">&#123;
+  pk: 1,
+  firstName: "Stanley",
+  lastName: "Kubrick"
+&#125;</code></pre>
+
+<h4 id="pk"><a href="#pk" class="headerlink" title="pk"></a>pk</h4><p>Type data: <code>number</code></p>
+<h4 id="firstName"><a href="#firstName" class="headerlink" title="firstName"></a>firstName</h4><p>Type data: <code>string</code></p>
+<h4 id="lastName"><a href="#lastName" class="headerlink" title="lastName"></a>lastName</h4><p>Type data: <code>string</code></p>
+<h2 id="Callbacks"><a href="#Callbacks" class="headerlink" title="Callbacks"></a>Callbacks</h2><p>Callbacks can be used to execute actions based on user interaction with the interface. For example label-studio server is using it to communicate with an API. Pass them along with other options when initiating the instance.</p>
+<h3 id="onSubmitCompletion"><a href="#onSubmitCompletion" class="headerlink" title="onSubmitCompletion"></a>onSubmitCompletion</h3><p>Type data: <code>function</code></p>
+<p>Called when a button <code>submit</code> is pressed. <code>ls</code> is label studio instance, <code>completion</code> is value of current completion.</p>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><pre><code class="hljs javascript">onSubmitCompletion: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ls, completion</span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(completion)
+&#125;</code></pre>
+
+<h3 id="onUpdateCompletion"><a href="#onUpdateCompletion" class="headerlink" title="onUpdateCompletion"></a>onUpdateCompletion</h3><p>Type data: <code>function</code></p>
+<p>Called when a button <code>update</code> is pressed. <code>ls</code> is label studio instance, <code>completion</code> is value of current completion.</p>
+<h4 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h4><pre><code class="hljs javascript">updateCompletion: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ls, completion</span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(result)
+&#125;</code></pre>
+
+<h3 id="onDeleteCompletion"><a href="#onDeleteCompletion" class="headerlink" title="onDeleteCompletion"></a>onDeleteCompletion</h3><p>Type data: <code>function</code></p>
+<p>Called when a button <code>delete</code> is pressed. <code>ls</code> is label studio instance, <code>completion</code> is value of current completion.</p>
+<h4 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h4><pre><code class="hljs javascript">onDeleteCompletion: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ls, completion</span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(result)
+&#125;</code></pre>
+
+<h3 id="onEntityCreate"><a href="#onEntityCreate" class="headerlink" title="onEntityCreate"></a>onEntityCreate</h3><p>Type data: <code>function</code></p>
+<p>Called when a new region gets labeled, for example a new bbox is created. <code>region</code> is the object that got created</p>
+<h4 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h4><pre><code class="hljs javascript">onEntityCreate: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">region</span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(region)
+&#125;</code></pre>
+
+<h3 id="onEntityDelete"><a href="#onEntityDelete" class="headerlink" title="onEntityDelete"></a>onEntityDelete</h3><p>Type data: <code>function</code></p>
+<p>Called when an existing region got deleted. <code>region</code> is the object itself.</p>
+<h4 id="Example-4"><a href="#Example-4" class="headerlink" title="Example"></a>Example</h4><pre><code class="hljs javascript">onEntityDelete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">region</span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(region)
+&#125;</code></pre>
+
+<h3 id="onSkipTask"><a href="#onSkipTask" class="headerlink" title="onSkipTask"></a>onSkipTask</h3><p>Type data: <code>function</code></p>
+<p>Called when a button <code>skip</code> is pressed. <code>ls</code> is label studio instance.</p>
+<h4 id="Example-5"><a href="#Example-5" class="headerlink" title="Example"></a>Example</h4><pre><code class="hljs javascript">onSkipTask: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ls</span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(result)
+&#125;</code></pre>
+
+<h3 id="onLabelStudioLoad"><a href="#onLabelStudioLoad" class="headerlink" title="onLabelStudioLoad"></a>onLabelStudioLoad</h3><p>Type data: <code>function</code></p>
+<p>Called when label studio has fully loaded and is ready, <code>ls</code> is the label studio instance</p>
+<h4 id="Example-6"><a href="#Example-6" class="headerlink" title="Example"></a>Example</h4><pre><code class="hljs javascript">onLabelStudioLoad: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ls</span>) </span>&#123;
+  <span class="hljs-built_in">console</span>.log(result)
+&#125;</code></pre>
+
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/guide/frontend.html">Frontend library</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/guide/ml.html">Machine learning backend</a> →</span>
+      
+    </div>
+    
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

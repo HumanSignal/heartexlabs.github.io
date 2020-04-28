@@ -1,0 +1,376 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Image Ellipse — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Image Ellipse — Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Image Ellipse — Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class>Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class="current">Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="list">
+      <ul class="menu-root">
+    <li><h3 class="root">templates</h3></li>
+
+  
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/index.html" class="sidebar-link">Introduction</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/image_classification.html" class="sidebar-link">Image Classification</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/image_bbox.html" class="sidebar-link">Image Object Detection</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/image_keypoints.html" class="sidebar-link">Image Key Points</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/image_segmentation.html" class="sidebar-link new">Image Segmentation</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/image_ellipse.html" class="sidebar-link current new">Image Ellipse</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/image_polygons.html" class="sidebar-link">Image Polygons</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/named_entity.html" class="sidebar-link">Text Named Entity Recognition</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/sentiment_analysis.html" class="sidebar-link">Text Sentiment Analysis</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/dialogue_analysis.html" class="sidebar-link">Dialogue Analysis</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/html_document.html" class="sidebar-link new">HTML Documents NER</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/transcribe_audio.html" class="sidebar-link">Audio Transcription</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/audio_classification.html" class="sidebar-link">Audio Classification</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/audio_regions.html" class="sidebar-link">Audio Regions</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/video_classification.html" class="sidebar-link new">Video Classifier</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+         
+      
+    <li>
+      <a href="/templates/pairwise_comparison.html" class="sidebar-link new">Pairwise Comparison</a>
+    </li>
+    
+</ul>
+
+    </div>
+  </div>
+  <a href="/"><img src="/images/opossum/other/5.svg" alt="label studio logo" height="120"></a>
+</div>
+
+
+
+<div class="content templates with-sidebar ">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+    
+  
+  
+    <h1>Image Ellipse</h1>
+  
+  <p>Put ellipses on the image</p>
+<img src="/images/screens/image_ellipse.png" class="img-template-example" title="Images Ellipse">
+
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><pre><code class="hljs bash">label-studio init image_ellipse_project
+label-studio start image_ellipse_project</code></pre>
+
+<h2 id="Config"><a href="#Config" class="headerlink" title="Config"></a>Config</h2><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">EllipseLabels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"tag"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"img"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Blood Cell"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Stem Cell"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">EllipseLabels</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"img"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$image"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+
+  
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

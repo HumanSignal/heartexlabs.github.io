@@ -1,0 +1,320 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Getting started — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Getting started — Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Getting started — Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class="current">Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="list">
+      <ul class="menu-root">
+    <li><h3 class="root">guide</h3></li>
+
+  
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/index.html" class="sidebar-link current">Getting started</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/tasks.html" class="sidebar-link">Import tasks</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/setup.html" class="sidebar-link">Project setup</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/labeling.html" class="sidebar-link">Labeling</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/completions.html" class="sidebar-link">Export results</a>
+    </li>
+    
+    
+
+
+      
+          <li><h4>Advanced usage</h4></li>
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend.html" class="sidebar-link">Frontend library</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend_reference.html" class="sidebar-link">Frontend reference</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/ml.html" class="sidebar-link">Machine learning backend</a>
+    </li>
+    
+</ul>
+
+    </div>
+  </div>
+  <a href="/"><img src="/images/opossum/other/5.svg" alt="label studio logo" height="120"></a>
+</div>
+
+
+
+<div class="content guide with-sidebar index-guide">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+    
+  
+  
+    <h1>Getting started</h1>
+  
+  <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Label Studio is a self-contained Web application for multi-typed data labeling and exploration. The <em>backend</em> is written in pure Python powered by <a href="https://github.com/pallets/flask" target="_blank" rel="noopener">Flask</a>. The <em>frontend</em> part is a backend-agnostic <a href="https://reactjs.org/" target="_blank" rel="noopener">React</a> + <a href="https://github.com/mobxjs/mobx-state-tree" target="_blank" rel="noopener">MST</a> app, included as a precompiled script.</p>
+<p>Here are the main concepts behind Label Studio’s workflow:</p>
+<div style="margin:auto; text-align:center; width:100%"><img src="/images/label-studio-ov.jpg" style="opacity: 0.7"></div>
+
+<ul>
+<li><strong>Tasks</strong> represent an individual dataset items. Label Studio is a multi-type labeling tool - you can <a href="tasks.html">import</a> either text, image, audio URL, HTML text or any number and combination of these data resources.</li>
+<li><strong>Completions</strong> are the labeling results in <a href="completions.html#Completion-fields">JSON format</a>. They could be <a href="completions.html">exported</a> in various common formats, ready to use in machine learning pipelines.</li>
+<li><strong>Predictions</strong> are the optional labeling results in <a href="completions.html#Completion-fields">the same format</a>, but unlike completions they are used for generating pre-labeling during the annotation process, or validating the model predictions.</li>
+<li><a href="ml.html"><strong>Machine learning backend</strong> connects</a> popular machine learning frameworks to Label Studio for active learning &amp; generating model predictions on-the-fly.</li>
+<li><strong>Labeling config</strong> is a simple <a href="setup.html#Labeling-config">XML tree with <strong>tags</strong></a> used to configure UI elements, connect input data to output labeling scheme.</li>
+<li><strong>Project</strong> encompasses tasks, config, predictions and completions all-in-one in an isolated directory</li>
+<li><strong>Frontend Labeling UI</strong> is accessible from any browser, distributed as precompiled js/css scripts and could be <a href="frontend.html">easily extendable with new labeling tags</a>. You can also <a href="frontend.html#Quickstart">embed Label Studio UI into your applications</a>.</li>
+</ul>
+<h2 id="Quickstart"><a href="#Quickstart" class="headerlink" title="Quickstart"></a>Quickstart</h2><h3 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h3><p>Label Studio is supported for Python 3.5 or greater, running on Linux, Windows and MacOSX.</p>
+<blockquote>
+<p>Note: for Windows users the default installation may fail to build <code>lxml</code> package. Consider manually installing it from <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml" target="_blank" rel="noopener">unofficial Windows binaries</a> e.g. if you are running on x64 with Python 3.8, run <code>pip install lxml‑4.5.0‑cp38‑cp38‑win_amd64.whl</code>.</p>
+</blockquote>
+<h3 id="Running-with-pip"><a href="#Running-with-pip" class="headerlink" title="Running with pip"></a>Running with pip</h3><p>To install Label Studio via pip, you need Python&gt;=3.5 and run:</p>
+<pre><code class="hljs bash">pip install label-studio</code></pre>
+
+<p>Then launch a new project which stores all labeling data in a local directory <code>my_labeling_project</code>:</p>
+<pre><code class="hljs bash">label-studio start my_labeling_project --init</code></pre>
+
+<p>The default browser opens automatically at <a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>.</p>
+<h3 id="Running-with-Docker"><a href="#Running-with-Docker" class="headerlink" title="Running with Docker"></a>Running with Docker</h3><p>Label Studio is also distributed as a docker container. Make sure you have <a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a> installed on your local machine.</p>
+<p>Install and start Label Studio at <a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> storing all labeling data in <code>./my_labeling_project</code> directory:</p>
+<pre><code class="hljs bash">docker run --rm -p 8080:8080 -v `<span class="hljs-built_in">pwd</span>`/my_labeling_project:/label-studio/my_labeling_project --name label-studio heartexlabs/label-studio:latest</code></pre>
+
+<blockquote>
+<p>Note: if <code>./my_labeling_project</code> the folder exists, an exception will be thrown. Please delete this folder or use <code>--force</code> option.<br>Note: for Windows, you have to modify the volumes paths set by <code>-v</code> option</p>
+</blockquote>
+<p>You can override the default startup command by appending any of <a href>available command line arguments</a>:</p>
+<pre><code class="hljs bash">docker run -p 8080:8080 -v `<span class="hljs-built_in">pwd</span>`/my_project:/label-studio/my_project --name label-studio heartexlabs/label-studio:latest label-studio start my_project --init --force --template image_mixedlabel</code></pre>
+
+<p>If you want to build a local image, run:</p>
+<pre><code class="hljs bash">docker build -t heartexlabs/label-studio:latest .</code></pre>
+
+<h3 id="Running-from-source"><a href="#Running-from-source" class="headerlink" title="Running from source"></a>Running from source</h3><p>If you want to use nighty builds, or extend the functionality, consider to download the source code using Git and run Label Studio locally:</p>
+<pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/heartexlabs/label-studio.git
+<span class="hljs-built_in">cd</span> label-studio
+python setup.py develop</code></pre>
+
+<p>Then create a new project, it stores all labeling data in a local directory <code>my_labeling_project</code>:</p>
+<pre><code class="hljs bash">label-studio start my_labeling_project --init</code></pre>
+
+<p>The default browser will open automatically at <a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a>.</p>
+<h3 id="Multisession-mode"><a href="#Multisession-mode" class="headerlink" title="Multisession mode"></a>Multisession mode</h3><p>You can start Label Studio in <em>multisession mode</em> - each browser session creates it’s own project with associated session ID as a name.</p>
+<p>In order to launch Label Studio in multisession mode and keep all projects in a separate directory <code>session_projects</code>, run</p>
+<pre><code class="hljs bash">label-studio start-multi-session --root-dir ./session_projects</code></pre>
+
+<h2 id="Command-line-arguments"><a href="#Command-line-arguments" class="headerlink" title="Command line arguments"></a>Command line arguments</h2><p>You can specify input tasks, project config, machine learning backend and other options via the command line interface. Run <code>label-studio start --help</code> to see all available options.</p>
+
+  
+    <div class="guide-links">
+      
+      
+      
+      
+        <span style="float: right;"><a href="/guide/tasks.html">Import tasks</a> →</span>
+      
+    </div>
+    
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

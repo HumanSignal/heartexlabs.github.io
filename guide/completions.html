@@ -1,0 +1,399 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Export results — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Export results — Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Export results — Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class="current">Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="list">
+      <ul class="menu-root">
+    <li><h3 class="root">guide</h3></li>
+
+  
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/index.html" class="sidebar-link">Getting started</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/tasks.html" class="sidebar-link">Import tasks</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/setup.html" class="sidebar-link">Project setup</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/labeling.html" class="sidebar-link">Labeling</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/completions.html" class="sidebar-link current">Export results</a>
+    </li>
+    
+    
+
+
+      
+          <li><h4>Advanced usage</h4></li>
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend.html" class="sidebar-link">Frontend library</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend_reference.html" class="sidebar-link">Frontend reference</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/ml.html" class="sidebar-link">Machine learning backend</a>
+    </li>
+    
+</ul>
+
+    </div>
+  </div>
+  <a href="/"><img src="/images/opossum/other/5.svg" alt="label studio logo" height="120"></a>
+</div>
+
+
+
+<div class="content guide with-sidebar completions-guide">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+    
+  
+  
+    <h1>Export results</h1>
+  
+  <p>Your annotations are stored in <a href="#Completion-format">raw completion format</a> inside <code>my_project_name/completions</code> directory, one file per labeled task named as <code>task_id.json</code>.</p>
+<p>You can optionally convert and export raw completions to a more common format by doing one of the following:</p>
+<ul>
+<li>From <a href="http://localhost:8080/export" target="_blank" rel="noopener">/export</a> page by choosing target format</li>
+<li>Applying <a href="https://github.com/heartexlabs/label-studio-converter" target="_blank" rel="noopener">converter tool</a> to <code>my_project_name/completions</code> directory</li>
+<li>By using <a href="#Export-using-API">Export API</a></li>
+</ul>
+<h2 id="Basic-format"><a href="#Basic-format" class="headerlink" title="Basic format"></a>Basic format</h2><p>The output data is stored in <em>completions</em> - JSON formatted files, one per each completed task saved in project directory in <code>completions</code> folder or in the <a href="config.html#output_dir"><code>&quot;output_dir&quot;</code> option</a> The example structure of <em>completion</em> is the following:</p>
+<pre><code class="hljs json">&#123;
+    <span class="hljs-attr">"completions"</span>: [
+        &#123;
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"1001"</span>,
+            <span class="hljs-attr">"lead_time"</span>: <span class="hljs-number">15.053</span>,
+            <span class="hljs-attr">"result"</span>: [
+                &#123;
+                    <span class="hljs-attr">"from_name"</span>: <span class="hljs-string">"tag"</span>,
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"Dx_aB91ISN"</span>,
+                    <span class="hljs-attr">"source"</span>: <span class="hljs-string">"$image"</span>,
+                    <span class="hljs-attr">"to_name"</span>: <span class="hljs-string">"img"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"rectanglelabels"</span>,
+                    <span class="hljs-attr">"value"</span>: &#123;
+                        <span class="hljs-attr">"height"</span>: <span class="hljs-number">10.458911419423693</span>,
+                        <span class="hljs-attr">"rectanglelabels"</span>: [
+                            <span class="hljs-string">"Moonwalker"</span>
+                        ],
+                        <span class="hljs-attr">"rotation"</span>: <span class="hljs-number">0</span>,
+                        <span class="hljs-attr">"width"</span>: <span class="hljs-number">12.4</span>,
+                        <span class="hljs-attr">"x"</span>: <span class="hljs-number">50.8</span>,
+                        <span class="hljs-attr">"y"</span>: <span class="hljs-number">5.869797225186766</span>
+                    &#125;
+                &#125;
+            ]
+        &#125;
+    ],
+    <span class="hljs-attr">"data"</span>: &#123;
+        <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://htx-misc.s3.amazonaws.com/opensource/label-studio/examples/images/nick-owuor-astro-nic-visuals-wDifg5xc9Z4-unsplash.jpg"</span>
+    &#125;,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"predictions"</span>: [
+        &#123;
+            <span class="hljs-attr">"created_ago"</span>: <span class="hljs-string">"3 hours"</span>,
+            <span class="hljs-attr">"model_version"</span>: <span class="hljs-string">"model 1"</span>,
+            <span class="hljs-attr">"result"</span>: [
+                &#123;
+                    <span class="hljs-attr">"from_name"</span>: <span class="hljs-string">"tag"</span>,
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"t5sp3TyXPo"</span>,
+                    <span class="hljs-attr">"source"</span>: <span class="hljs-string">"$image"</span>,
+                    <span class="hljs-attr">"to_name"</span>: <span class="hljs-string">"img"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"rectanglelabels"</span>,
+                    <span class="hljs-attr">"value"</span>: &#123;
+                        <span class="hljs-attr">"height"</span>: <span class="hljs-number">11.612284069097889</span>,
+                        <span class="hljs-attr">"rectanglelabels"</span>: [
+                            <span class="hljs-string">"Moonwalker"</span>
+                        ],
+                        <span class="hljs-attr">"rotation"</span>: <span class="hljs-number">0</span>,
+                        <span class="hljs-attr">"width"</span>: <span class="hljs-number">39.6</span>,
+                        <span class="hljs-attr">"x"</span>: <span class="hljs-number">13.2</span>,
+                        <span class="hljs-attr">"y"</span>: <span class="hljs-number">34.702495201535505</span>
+                    &#125;
+                &#125;
+            ]
+        &#125;,
+        &#123;
+            <span class="hljs-attr">"created_ago"</span>: <span class="hljs-string">"4 hours"</span>,
+            <span class="hljs-attr">"model_version"</span>: <span class="hljs-string">"model 2"</span>,
+            <span class="hljs-attr">"result"</span>: [
+                &#123;
+                    <span class="hljs-attr">"from_name"</span>: <span class="hljs-string">"tag"</span>,
+                    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"t5sp3TyXPo"</span>,
+                    <span class="hljs-attr">"source"</span>: <span class="hljs-string">"$image"</span>,
+                    <span class="hljs-attr">"to_name"</span>: <span class="hljs-string">"img"</span>,
+                    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"rectanglelabels"</span>,
+                    <span class="hljs-attr">"value"</span>: &#123;
+                        <span class="hljs-attr">"height"</span>: <span class="hljs-number">33.61228406909789</span>,
+                        <span class="hljs-attr">"rectanglelabels"</span>: [
+                            <span class="hljs-string">"Moonwalker"</span>
+                        ],
+                        <span class="hljs-attr">"rotation"</span>: <span class="hljs-number">0</span>,
+                        <span class="hljs-attr">"width"</span>: <span class="hljs-number">39.6</span>,
+                        <span class="hljs-attr">"x"</span>: <span class="hljs-number">13.2</span>,
+                        <span class="hljs-attr">"y"</span>: <span class="hljs-number">54.702495201535505</span>
+                    &#125;
+                &#125;
+            ]
+        &#125;
+    ]
+&#125;</code></pre>
+
+<h3 id="completions"><a href="#completions" class="headerlink" title="completions"></a>completions</h3><p>That’s where the list of labeling results per one task is stored.</p>
+<h4 id="id"><a href="#id" class="headerlink" title="id"></a>id</h4><p>Unique completion identifier</p>
+<h4 id="lead-time"><a href="#lead-time" class="headerlink" title="lead_time"></a>lead_time</h4><p>Time in seconds spent to create this completion</p>
+<h4 id="result"><a href="#result" class="headerlink" title="result"></a>result</h4><p>Completion result data</p>
+<h5 id="id-1"><a href="#id-1" class="headerlink" title="id"></a>id</h5><p>Unique completion result identifier</p>
+<h5 id="from-name"><a href="#from-name" class="headerlink" title="from_name"></a>from_name</h5><p>Name of the tag that was used to label region (<a href="/tags">control tags</a>)</p>
+<h5 id="to-name"><a href="#to-name" class="headerlink" title="to_name"></a>to_name</h5><p>Name of the object tag that provided the region to be labeled (<a href="/tags">object tags</a>)</p>
+<h5 id="type"><a href="#type" class="headerlink" title="type"></a>type</h5><p>Type of the labeling/tag</p>
+<h4 id="value"><a href="#value" class="headerlink" title="value"></a>value</h4><p>Tag specific value that includes the labeling result details. The exact structure of value depends on the chosen labeling tag.<br><a href="/tags">Explore each tag</a> for more details.</p>
+<h3 id="data"><a href="#data" class="headerlink" title="data"></a>data</h3><p>Data copied from <a href="config.html#JSON-file">input task</a></p>
+<h3 id="id-2"><a href="#id-2" class="headerlink" title="id"></a>id</h3><p>Task identifier</p>
+<h3 id="predictions"><a href="#predictions" class="headerlink" title="predictions"></a>predictions</h3><p>Machine learning predictions (aka <em>pre-labeling results</em>). Follows the <a href="completions.html#completions">same format</a> as completion, with some additional fields related to machine learning inference:</p>
+<ul>
+<li><strong>score</strong> - the overall result score (probabilistic output, confidence level, etc.)</li>
+</ul>
+<h2 id="Export-formats"><a href="#Export-formats" class="headerlink" title="Export formats"></a>Export formats</h2><h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><p>List of items in <a href="#Completion-format">raw completion format</a> stored in JSON file</p>
+<h3 id="JSON-MIN"><a href="#JSON-MIN" class="headerlink" title="JSON_MIN"></a>JSON_MIN</h3><p>List of items where only <code>&quot;from_name&quot;, &quot;to_name&quot;</code> values from <a href="#Completion-format">raw completion format</a> are kept:</p>
+<pre><code class="hljs json">&#123;
+  <span class="hljs-attr">"image"</span>: <span class="hljs-string">"https://htx-misc.s3.amazonaws.com/opensource/label-studio/examples/images/nick-owuor-astro-nic-visuals-wDifg5xc9Z4-unsplash.jpg"</span>,
+  <span class="hljs-attr">"tag"</span>: [&#123;
+    <span class="hljs-attr">"height"</span>: <span class="hljs-number">10.458911419423693</span>,
+    <span class="hljs-attr">"rectanglelabels"</span>: [
+        <span class="hljs-string">"Moonwalker"</span>
+    ],
+    <span class="hljs-attr">"rotation"</span>: <span class="hljs-number">0</span>,
+    <span class="hljs-attr">"width"</span>: <span class="hljs-number">12.4</span>,
+    <span class="hljs-attr">"x"</span>: <span class="hljs-number">50.8</span>,
+    <span class="hljs-attr">"y"</span>: <span class="hljs-number">5.869797225186766</span>
+  &#125;]
+&#125;</code></pre>
+
+<h3 id="CSV"><a href="#CSV" class="headerlink" title="CSV"></a>CSV</h3><p>Results are stored in comma-separated tabular file with column names specified by <code>&quot;from_name&quot;</code> <code>&quot;to_name&quot;</code> values</p>
+<h3 id="TSV"><a href="#TSV" class="headerlink" title="TSV"></a>TSV</h3><p>Results are stored in tab-separated tabular file with column names specified by <code>&quot;from_name&quot;</code> <code>&quot;to_name&quot;</code> values</p>
+<h3 id="CONLL2003"><a href="#CONLL2003" class="headerlink" title="CONLL2003"></a>CONLL2003</h3><p>Popular format used for <a href="https://www.clips.uantwerpen.be/conll2003/ner/" target="_blank" rel="noopener">CoNLL-2003 named entity recognition challenge</a></p>
+<h3 id="COCO"><a href="#COCO" class="headerlink" title="COCO"></a>COCO</h3><p>Popular machine learning format used by <a href="http://cocodataset.org/#home" target="_blank" rel="noopener">COCO dataset</a> for object detection and image segmentation tasks</p>
+<h3 id="Pascal-VOC-XML"><a href="#Pascal-VOC-XML" class="headerlink" title="Pascal VOC XML"></a>Pascal VOC XML</h3><p>Popular XML-formatted task data used for object detection and image segmentation tasks</p>
+<h2 id="Export-using-API"><a href="#Export-using-API" class="headerlink" title="Export using API"></a>Export using API</h2><p>You can use an API to request a file with exported results, e.g.</p>
+<pre><code class="hljs bash">curl http://localhost:8080/api/<span class="hljs-built_in">export</span>?format=JSON &gt; exported_results.tar.gz</code></pre>
+
+<p>The <code>format</code> parameter could be one of available <a href="#Export-formats">export formats</a></p>
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/guide/labeling.html">Labeling</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/guide/frontend.html">Frontend library</a> →</span>
+      
+    </div>
+    
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

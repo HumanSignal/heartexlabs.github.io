@@ -1,0 +1,311 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class>Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  <div class="sidebar">
+    <ul class="main-menu">
+      
+<a href="/guide" class>Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+    </ul>
+  </div>
+
+<div class="content   ">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+  
+  <h2 id="Text-classification-with-Scikit-Learn"><a href="#Text-classification-with-Scikit-Learn" class="headerlink" title="Text classification with Scikit-Learn"></a>Text classification with Scikit-Learn</h2><p>It explains the basics of Machine Learning (ML) backend usage within Label Studio.<br>We’ll take a simple text classification model powered by <a href="https://scikit-learn.org/stable/" target="_blank" rel="noopener">scikit-learn</a> library.<br>It is compatible with text classication task, i.e. where <code>&lt;Choices&gt;</code> control tag is used with <code>&lt;Text&gt;</code> object tag. The example of a label config:</p>
+<pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Text</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"news"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$text"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Choices</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"topic"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"news"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Politics"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Technology"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Sport"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Weather"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Choices</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+<h3 id="Create-a-model-script"><a href="#Create-a-model-script" class="headerlink" title="Create a model script"></a>Create a model script</h3><p>If you create ML backend by using Label Studio’s ML SDK, you have to follow the rules:</p>
+<ul>
+<li>created model class should be inherited from <code>label_studio.ml.LabelStudioMLBase</code></li>
+<li>2 methods should be overrided:<ul>
+<li><code>predict()</code> takes <a href="/guide/tasks.html#Basic-format">input tasks</a> and outputs <a href="/guide/completions.html#predictions">predictions</a> in a Label Studio format</li>
+<li><code>train()</code> receives <a href="/guide/completions.html#Basic-format">completions</a> iterable and returns dictionary with created links and resources. This dictionary will be later used for model loading via <code>self.train_output</code> field.</li>
+</ul>
+</li>
+</ul>
+<p>Create a file <code>model.py</code> with the following content:</p>
+<pre><code class="hljs python"><span class="hljs-keyword">import</span> pickle
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+
+<span class="hljs-keyword">from</span> sklearn.linear_model <span class="hljs-keyword">import</span> LogisticRegression
+<span class="hljs-keyword">from</span> sklearn.feature_extraction.text <span class="hljs-keyword">import</span> TfidfVectorizer
+<span class="hljs-keyword">from</span> sklearn.pipeline <span class="hljs-keyword">import</span> make_pipeline
+
+<span class="hljs-keyword">from</span> label_studio.ml <span class="hljs-keyword">import</span> LabelStudioMLBase
+
+
+<span class="hljs-comment"># This is a main declaration of a machine learning model class</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SimpleTextClassifier</span><span class="hljs-params">(LabelStudioMLBase)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, **kwargs)</span>:</span>
+        <span class="hljs-comment"># don't forget to initialize base class...</span>
+        super(SimpleTextClassifier, self).__init__(**kwargs)
+
+        <span class="hljs-comment"># then collect all keys from config which will be used to extract data from task and to form prediction</span>
+        <span class="hljs-comment"># Parsed label config contains only one output of &lt;Choices&gt; type</span>
+        <span class="hljs-keyword">assert</span> len(self.parsed_label_config) == <span class="hljs-number">1</span>
+        self.from_name, self.info = list(self.parsed_label_config.items())[<span class="hljs-number">0</span>]
+        <span class="hljs-keyword">assert</span> self.info[<span class="hljs-string">'type'</span>] == <span class="hljs-string">'Choices'</span>
+
+        <span class="hljs-comment"># the model has only one textual input</span>
+        <span class="hljs-keyword">assert</span> len(self.info[<span class="hljs-string">'to_name'</span>]) == <span class="hljs-number">1</span>
+        <span class="hljs-keyword">assert</span> len(self.info[<span class="hljs-string">'inputs'</span>]) == <span class="hljs-number">1</span>
+        <span class="hljs-keyword">assert</span> self.info[<span class="hljs-string">'inputs'</span>][<span class="hljs-number">0</span>][<span class="hljs-string">'type'</span>] == <span class="hljs-string">'Text'</span>
+        self.to_name = self.info[<span class="hljs-string">'to_name'</span>][<span class="hljs-number">0</span>]
+        self.value = self.info[<span class="hljs-string">'inputs'</span>][<span class="hljs-number">0</span>][<span class="hljs-string">'value'</span>]
+
+        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> self.train_output:
+            <span class="hljs-comment"># If there is no trainings, define cold-started the simple TF-IDF text classifier</span>
+            self.model = make_pipeline(TfidfVectorizer(), LogisticRegression())
+            <span class="hljs-comment"># This is an array of &lt;Choice&gt; labels</span>
+            self.labels = self.info[<span class="hljs-string">'labels'</span>]
+            <span class="hljs-comment"># make some dummy initialization</span>
+            self.model.fit(X=self.labels, y=list(range(len(self.labels))))
+            print(<span class="hljs-string">'Initialized with from_name=&#123;from_name&#125;, to_name=&#123;to_name&#125;, labels=&#123;labels&#125;'</span>.format(
+                from_name=self.from_name, to_name=self.to_name, labels=str(self.labels)
+            ))
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-comment"># otherwise load the model from the latest training results</span>
+            self.model_file = self.train_output[<span class="hljs-string">'model_file'</span>]
+            <span class="hljs-keyword">with</span> open(self.model_file, mode=<span class="hljs-string">'rb'</span>) <span class="hljs-keyword">as</span> f:
+                self.model = pickle.load(f)
+            <span class="hljs-comment"># and use the labels from training outputs</span>
+            self.labels = self.train_output[<span class="hljs-string">'labels'</span>]
+            print(<span class="hljs-string">'Loaded from train output with from_name=&#123;from_name&#125;, to_name=&#123;to_name&#125;, labels=&#123;labels&#125;'</span>.format(
+                from_name=self.from_name, to_name=self.to_name, labels=str(self.labels)
+            ))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">predict</span><span class="hljs-params">(self, tasks, **kwargs)</span>:</span>
+        <span class="hljs-comment"># collect input texts</span>
+        input_texts = []
+        <span class="hljs-keyword">for</span> task <span class="hljs-keyword">in</span> tasks:
+            input_texts.append(task[<span class="hljs-string">'data'</span>][self.value])
+
+        <span class="hljs-comment"># get model predictions</span>
+        probabilities = self.model.predict_proba(input_texts)
+        predicted_label_indices = np.argmax(probabilities, axis=<span class="hljs-number">1</span>)
+        predicted_scores = probabilities[np.arange(len(predicted_label_indices)), predicted_label_indices]
+        predictions = []
+        <span class="hljs-keyword">for</span> idx, score <span class="hljs-keyword">in</span> zip(predicted_label_indices, predicted_scores):
+            predicted_label = self.labels[idx]
+            <span class="hljs-comment"># prediction result for the single task</span>
+            result = [&#123;
+                <span class="hljs-string">'from_name'</span>: self.from_name,
+                <span class="hljs-string">'to_name'</span>: self.to_name,
+                <span class="hljs-string">'type'</span>: <span class="hljs-string">'choices'</span>,
+                <span class="hljs-string">'value'</span>: &#123;<span class="hljs-string">'choices'</span>: [predicted_label]&#125;
+            &#125;]
+
+            <span class="hljs-comment"># expand predictions with their scores for all tasks</span>
+            predictions.append(&#123;<span class="hljs-string">'result'</span>: result, <span class="hljs-string">'score'</span>: score&#125;)
+
+        <span class="hljs-keyword">return</span> predictions
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fit</span><span class="hljs-params">(self, completions, workdir=None, **kwargs)</span>:</span>
+        input_texts = []
+        output_labels = []
+        label2idx = &#123;l: i <span class="hljs-keyword">for</span> i, l <span class="hljs-keyword">in</span> enumerate(self.labels)&#125;
+        <span class="hljs-keyword">for</span> completion <span class="hljs-keyword">in</span> completions:
+            <span class="hljs-comment"># get input text from task data</span>
+            input_text = completion[<span class="hljs-string">'data'</span>][self.value]
+
+            <span class="hljs-comment"># get an annotation</span>
+            output_label = completion[<span class="hljs-string">'completions'</span>][<span class="hljs-number">0</span>][<span class="hljs-string">'result'</span>][<span class="hljs-number">0</span>][<span class="hljs-string">'value'</span>][<span class="hljs-string">'choices'</span>][<span class="hljs-number">0</span>]
+            output_label_idx = label2idx[output_label]
+            input_texts.append(input_text)
+            output_labels.append(output_label_idx)
+
+        <span class="hljs-comment"># train the model</span>
+        self.model.fit(input_texts, output_labels)
+
+        <span class="hljs-comment"># save output resources</span>
+        model_file = os.path.join(workdir, <span class="hljs-string">'model.pkl'</span>)
+        <span class="hljs-keyword">with</span> open(model_file, mode=<span class="hljs-string">'wb'</span>) <span class="hljs-keyword">as</span> fout:
+            pickle.dump(self.model, fout)
+
+        train_output = &#123;
+            <span class="hljs-string">'labels'</span>: self.labels,
+            <span class="hljs-string">'model_file'</span>: model_file
+        &#125;
+        <span class="hljs-keyword">return</span> train_output</code></pre>
+
+<h3 id="Create-ML-backend-configs-amp-scripts"><a href="#Create-ML-backend-configs-amp-scripts" class="headerlink" title="Create ML backend configs &amp; scripts"></a>Create ML backend configs &amp; scripts</h3><p>Label Studio can automatically create all necessary configs and scripts needed to run ML backend from your newly created model.</p>
+<p>Let’s call ML backend <code>my_backend</code> and initialize ML backend directory <code>./my_backend</code>:</p>
+<pre><code class="hljs bash">label-studio-ml init my_backend</code></pre>
+
+<p>The later command takes your script <code>./model.py</code> then creates <code>./my_backend</code> directory at the same level and copies configs and scripts needed for launching ML backend either in development or production modes.</p>
+<blockquote>
+<p>Note: You can specify different location for your model script, e.g. <code>label-studio init my_backend --script /path/to/my/script.py</code></p>
+</blockquote>
+<h3 id="Launch-ML-backend-server"><a href="#Launch-ML-backend-server" class="headerlink" title="Launch ML backend server"></a>Launch ML backend server</h3><h4 id="Development-mode"><a href="#Development-mode" class="headerlink" title="Development mode"></a>Development mode</h4><p>In a development mode, training and inference are done in a single process, therefore the server doesn’t respond to incoming predictions requests while the model trains.</p>
+<p>In order to launch ML backend server in a Flask development mode, run</p>
+<pre><code class="hljs bash">label-studio-ml start my_backend</code></pre>
+
+<p>The server started on <code>http://localhost:9090</code> and outputs logs in console.</p>
+<h4 id="Production-mode"><a href="#Production-mode" class="headerlink" title="Production mode"></a>Production mode</h4><p>Production mode is powered by Redis server and RQ jobs that take care of backround training processes. It means that you can start training your model and continue making requests for predictions from current model state.<br>Once the model training process is finished, the new model version updates automatically.</p>
+<p>For production mode, please make sure you have docker and docker-compose installed on your system. Then execute:</p>
+<pre><code class="hljs bash"><span class="hljs-built_in">cd</span> my_backend/
+docker-compose up</code></pre>
+
+<p>Now you can explore runtime logs in <code>my_backend/logs/uwsgi.log</code> and RQ training logs in <code>my_backend/logs/rq.log</code></p>
+<h3 id="Using-ML-backend-with-Label-Studio"><a href="#Using-ML-backend-with-Label-Studio" class="headerlink" title="Using ML backend with Label Studio"></a>Using ML backend with Label Studio</h3><p>Initialize and start new Label Studio project connecting to the running ML backend:</p>
+<pre><code class="hljs bash">label-studio start --init --ml-backend-url http://localhost:9090</code></pre>
+
+<h4 id="Getting-predictions"><a href="#Getting-predictions" class="headerlink" title="Getting predictions"></a>Getting predictions</h4><p>You should see model predictions in a labeling interface.</p>
+<h4 id="Model-training"><a href="#Model-training" class="headerlink" title="Model training"></a>Model training</h4><p>Model training is triggered manually by pushing <code>Start training</code> button on <a href="http://localhost:8080/model" target="_blank" rel="noopener">/model</a> page, or by using an API call:</p>
+<pre><code class="hljs bash">curl -X POST http://localhost:8080/api/train</code></pre>
+
+
+  
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,306 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Project setup — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Project setup — Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Project setup — Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class="current">Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="list">
+      <ul class="menu-root">
+    <li><h3 class="root">guide</h3></li>
+
+  
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/index.html" class="sidebar-link">Getting started</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/tasks.html" class="sidebar-link">Import tasks</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/setup.html" class="sidebar-link current">Project setup</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/labeling.html" class="sidebar-link">Labeling</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/completions.html" class="sidebar-link">Export results</a>
+    </li>
+    
+    
+
+
+      
+          <li><h4>Advanced usage</h4></li>
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend.html" class="sidebar-link">Frontend library</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend_reference.html" class="sidebar-link">Frontend reference</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/ml.html" class="sidebar-link">Machine learning backend</a>
+    </li>
+    
+</ul>
+
+    </div>
+  </div>
+  <a href="/"><img src="/images/opossum/other/5.svg" alt="label studio logo" height="120"></a>
+</div>
+
+
+
+<div class="content guide with-sidebar setup-guide">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+    
+  
+  
+    <h1>Project setup</h1>
+  
+  <p><strong>Project</strong> is a directory where all annotation assets are located. It is a self-contained entity: when you start Label Studio for the first time e.g. <code>label-studio start ./my_project --init</code>,<br>it creates a directory <code>./my_project</code> from where its launched.</p>
+<p>If you want to start another project, just remove <code>./my_project</code> directory, or create a new one by running <code>label-studio start /path/to/new/project --init</code>.</p>
+<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><p><strong>Project directory</strong> is structured as follows:</p>
+<pre><code class="hljs bash">├── my_project
+│   ├── config.json     // project settings
+│   ├── tasks.json      // all imported tasks <span class="hljs-keyword">in</span> a dict like &#123;task_id: task&#125;
+│   ├── config.xml      // current project labeling config
+│   ├── completions     // directory with one completion per task_id stored <span class="hljs-keyword">in</span> one file
+│   │   ├── &lt;task_id&gt;.json
+│   ├── <span class="hljs-built_in">export</span>          // stores archives with all results exported form web UI 
+│   │   ├── 2020-03-06-15-23-47.zip</code></pre>
+
+<blockquote>
+<p>Warning: It is not recommended to modify any of the internal project files. For importing tasks, exporting completions or changing label config please use web UI or command line arguments (see <code>label-studio start --help</code> for details)</p>
+</blockquote>
+<h2 id="Labeling-config"><a href="#Labeling-config" class="headerlink" title="Labeling config"></a>Labeling config</h2><p>Project labeling config is an XML file that consists of:</p>
+<ul>
+<li><strong>object tags</strong> specifying input data sources from imported tasks,</li>
+<li><strong>control tags</strong> for configuring labeling schema (how annotation result looks like)</li>
+<li><strong>visual tags</strong> applying different user interface styles</li>
+</ul>
+<p><a class="button" href="/tags">Check Available Tags</a></p>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><p>Here an example config for classifying images provided by <code>image_url</code> key into two classes:</p>
+<pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"image_object"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$image_url"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Choices</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"image_classes"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"image_object"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Cat"</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Choice</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Dog"</span>/&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">Choices</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+<h2 id="Setup-from-file"><a href="#Setup-from-file" class="headerlink" title="Setup from file"></a>Setup from file</h2><p>It is possible to initialize a new project with predefined <code>config.xml</code>:</p>
+<pre><code class="hljs bash">label-studio my_new_project start --init --label-config config.xml</code></pre>
+
+<h2 id="Setup-from-UI"><a href="#Setup-from-UI" class="headerlink" title="Setup from UI"></a>Setup from UI</h2><p>You can also use the web interface at <a href="http://localhost:8080/setup" target="_blank" rel="noopener"><code>/setup</code></a> to paste your labeling config. Using web UI you also get a live update while you’re editting the config.</p>
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/guide/tasks.html">Import tasks</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/guide/labeling.html">Labeling</a> →</span>
+      
+    </div>
+    
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

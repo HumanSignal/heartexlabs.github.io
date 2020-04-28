@@ -1,0 +1,822 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>EllipseLabels — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="EllipseLabels — Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="EllipseLabels — Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class>Guide</a>
+<a href="/tags" class="current">Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="list">
+      <ul class="menu-root">
+    <li><h3 class="root">tags</h3></li>
+
+  
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/index.html" class="sidebar-link">Introduction</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+          <!-- <div style="margin-top: 20px; margin-right: 40px; background: url(/images/wave.png) repeat-x; opacity: 0.4; background-size: 20px; height: 20px;"></div> -->
+          <li><h4>Objects</h4></li>
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/audio.html" class="sidebar-link">Audio</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/audioplus.html" class="sidebar-link">AudioPlus</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/image.html" class="sidebar-link">Image</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/text.html" class="sidebar-link">Text</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/hypertext.html" class="sidebar-link">HyperText</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+          <li><h4>Controls</h4></li>
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/choices.html" class="sidebar-link">Choices</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/choice.html" class="sidebar-link">Choice</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/labels.html" class="sidebar-link">Labels</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/label.html" class="sidebar-link">Label</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/polygon.html" class="sidebar-link">Polygon</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/polygonlabels.html" class="sidebar-link">PolygonLabels</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/keypoint.html" class="sidebar-link">KeyPoint</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/rectangle.html" class="sidebar-link">Rectangle</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/hypertextlabels.html" class="sidebar-link">HyperTextLabels</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/keypointlabels.html" class="sidebar-link">KeypointLabels</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/rectanglelabels.html" class="sidebar-link">RectangleLabels</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/textarea.html" class="sidebar-link">TextArea</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/rating.html" class="sidebar-link">Rating</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/ellipse.html" class="sidebar-link new">Ellipse</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/ellipselabels.html" class="sidebar-link current new">EllipseLabels</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/pairwise.html" class="sidebar-link">Pairwise</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/brushlabels.html" class="sidebar-link new">BrushLabels</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/relation.html" class="sidebar-link new">Relation</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/relations.html" class="sidebar-link new">Relations</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+          <li><h4>Visual & Experience</h4></li>
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/header.html" class="sidebar-link">Header</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/table.html" class="sidebar-link">Table</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/view.html" class="sidebar-link">View</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/shortcut.html" class="sidebar-link">Shortcut</a>
+    </li>
+    
+    
+
+
+
+      
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+    <li>
+      <a href="/tags/style.html" class="sidebar-link">Style</a>
+    </li>
+    
+</ul>
+
+    </div>
+  </div>
+  <a href="/"><img src="/images/opossum/other/5.svg" alt="label studio logo" height="120"></a>
+</div>
+
+
+
+<div class="content tags with-sidebar ">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+    
+  
+  
+    <h1>EllipseLabels</h1>
+  
+  <p>EllipseLabels tag creates labeled ellipses. Used to create an ellipse on the image </p>
+<h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td><code>string</code></td>
+<td></td>
+<td>name of the element</td>
+</tr>
+<tr>
+<td>toName</td>
+<td><code>string</code></td>
+<td></td>
+<td>name of the image to label</td>
+</tr>
+<tr>
+<td>[opacity]</td>
+<td><code>float</code></td>
+<td><code>0.6</code></td>
+<td>opacity of rectangle</td>
+</tr>
+<tr>
+<td>[fillColor]</td>
+<td><code>string</code></td>
+<td></td>
+<td>ellipse fill color, default is transparent</td>
+</tr>
+<tr>
+<td>[strokeColor]</td>
+<td><code>string</code></td>
+<td></td>
+<td>stroke color</td>
+</tr>
+<tr>
+<td>[strokeWidth]</td>
+<td><code>number</code></td>
+<td><code>1</code></td>
+<td>width of stroke</td>
+</tr>
+<tr>
+<td>[canRotate]</td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>show or hide rotation handle</td>
+</tr>
+</tbody></table>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">View</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">EllipseLabels</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"labels"</span> <span class="hljs-attr">toName</span>=<span class="hljs-string">"image"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Person"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Label</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"Animal"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">EllipseLabels</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">Image</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"image"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$image"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">View</span>&gt;</span></code></pre>
+
+
+  
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

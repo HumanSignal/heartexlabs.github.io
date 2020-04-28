@@ -1,0 +1,328 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta name="generator" content="Hexo 3.9.0">
+      <title>Labeling — Label Studio</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="Labeling — Label Studio">
+      <meta property="og:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta property="og:image" content="https://repository-images.githubusercontent.com/192640529/6b34d180-dd95-11e9-8016-fddd7751cb2c">
+      <meta name="thumbnail" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:title" content="Labeling — Label Studio">
+      <meta name="twitter:description" content="Label Studio - Data labeling, annotation and exploration tool">
+      <meta name="twitter:image" content="https://labelstud.io/images/opossum/heartex_icon_opossum_green@2x.png">
+
+      <meta name="msapplication-TileColor" content="#4fc08d">
+      <meta name="theme-color" content="#4fc08d">
+
+      <meta name="msapplication-config" content="browserconfig.xml">
+      <link rel="manifest" href="/manifest.json">
+
+      <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Roboto Mono" rel="stylesheet" type="text/css">
+      <link href="//fonts.googleapis.com/css?family=Dosis:500&text=LabelStudio" rel="stylesheet" type="text/css">
+
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+      <!-- Place this tag in your head or just before your close body tag. -->
+      <script src="/js/jquery.min.js"></script>
+      <script async defer src="https://buttons.github.io/buttons.js"></script>
+      <script src="/js/search.js"></script>
+
+      <script src="/js/smooth-scroll.min.js"></script>
+
+    <!-- main page styles -->
+    <link rel="stylesheet" href="/css/page.css">
+    <link rel="stylesheet" href="/css/search.css">
+
+    
+
+    <!-- this needs to be loaded before guide's inline scripts -->
+
+  </head>
+  <body class="docs">
+    <div id="mobile-bar">
+        <a class="menu-button"></a>
+    </div>
+     <div id="header">
+  <a id="logo" href="/">
+    <img src="/images/ls_logo.png" alt="label studio logo">
+    <span style="font-size: 1.2em;">Label Studio</span>
+  </a>
+  <ul id="nav" style="display: flex; align-items: center">
+    
+<a href="/guide" class="current">Guide</a>
+<a href="/tags" class>Tags</a>
+<a href="/templates" class>Templates</a>
+<a href="/playground" class>Playground</a>
+<a href="/blog" class>Blog</a>
+
+<!-- Github starts -->
+<div style="margin: 7px 0 0 7px !important;" class="github-button-wrap">
+    <a class="github-button" href="https://github.com/heartexlabs/label-studio" data-icon="octicon-star" " data-size="large" data-show-count="true" aria-label="Star heartexlabs/label-studio on GitHub"></a>
+</div>
+
+<!-- Github repo -->
+<img src="/images/github-icon.png" height="25px" style="margin-left: 10px; cursor:pointer" class="github-link" onclick="window.location='https://github.com/heartexlabs/label-studio'">
+
+<!-- Search -->
+<div id="site_search">
+  <input type="text" id="local-search-input" name="q" results="0" autofocus placeholder="Search" class="st-search-input st-default-search-input form-control">
+</div>
+
+  </ul>
+</div>
+
+
+ 
+
+    
+        <div id="main" class="fix-sidebar">
+            
+  
+<div class="sidebar">
+  <div class="sidebar-inner">
+    <div class="list">
+      <ul class="menu-root">
+    <li><h3 class="root">guide</h3></li>
+
+  
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/index.html" class="sidebar-link">Getting started</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/tasks.html" class="sidebar-link">Import tasks</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/setup.html" class="sidebar-link">Project setup</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/labeling.html" class="sidebar-link current">Labeling</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/completions.html" class="sidebar-link">Export results</a>
+    </li>
+    
+    
+
+
+      
+          <li><h4>Advanced usage</h4></li>
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend.html" class="sidebar-link">Frontend library</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/frontend_reference.html" class="sidebar-link">Frontend reference</a>
+    </li>
+    
+    
+
+
+      
+
+
+      
+
+      
+    <li>
+      <a href="/guide/ml.html" class="sidebar-link">Machine learning backend</a>
+    </li>
+    
+</ul>
+
+    </div>
+  </div>
+  <a href="/"><img src="/images/opossum/other/5.svg" alt="label studio logo" height="120"></a>
+</div>
+
+
+
+<div class="content guide with-sidebar labeling-guide">
+
+  <div id="local-search-result-wrapper"></div>
+  <script>
+      var search_path = "search.xml";
+      if (search_path.length === 0) {
+        search_path = "search.xml";
+      }
+      var path = "/" + search_path;
+      searchFunc(path, 'local-search-input', 'local-search-result-wrapper');
+  </script>
+
+  
+    
+  
+  
+    <h1>Labeling</h1>
+  
+  <p>Let’s explore the complex example of multi-task labeling which includes text + image + audio data objects:<br><br></p>
+<img src="/images/labeling.png">
+
+<ul>
+<li><p>Labeling interface is implemented using JavaScript + React and placed to separated repository <a href="https://github.com/heartexlabs/label-studio-frontend" target="_blank" rel="noopener">Label Studio Frontend</a>. Label Studio has integrated Label Studio Frontend build. </p>
+</li>
+<li><p>Labeling interface is highly configurable: you can enable or disable some parts of it (completions panel, predictions panel, results panel, controls, submit &amp; skip buttons).  </p>
+</li>
+</ul>
+<h2 id="Key-concepts"><a href="#Key-concepts" class="headerlink" title="Key concepts"></a>Key concepts</h2><p>Here you can see relations among labeling objects: tasks, completions, results, etc.</p>
+<p>One user provides one completion, it’s atomic, and it consists of the result items. Result items can have relations between themselves with the specified direction of three types: left-right, right-left, or bidirectional. Normalizations are additional information in the custom string format about the current result item.</p>
+<br>
+<center><img src="/images/labeling-scheme.png" style="max-width: 600px; opacity: 0.6"></center>
+<br>
+Completions and Predictions are very similar. But predictions must be generated automatically by ML models.   
+
+<h2 id="Instructions"><a href="#Instructions" class="headerlink" title="Instructions"></a>Instructions</h2><p>Most of the actions described in this section are similar for all the data objects (images, audio, text, etc.).</p>
+<h3 id="Choices-TextArea-and-other-simple-tags"><a href="#Choices-TextArea-and-other-simple-tags" class="headerlink" title="Choices, TextArea and other simple tags"></a>Choices, TextArea and other simple tags</h3><p>Such tags have straightforward labeling mechanics. It’s intuitive for users, so let’s talk about more complex things below :-) </p>
+<h3 id="Add-region"><a href="#Add-region" class="headerlink" title="Add region"></a>Add region</h3><ol>
+<li>Select label you want to add (if you use Tag without labels like Polygon, just go to 2)</li>
+<li>Click on your data object (image, audio, text, etc) </li>
+</ol>
+<h3 id="Change-label"><a href="#Change-label" class="headerlink" title="Change label"></a>Change label</h3><p>You can change the label of the existing region:</p>
+<ol>
+<li>Select entity (span, bounding box, image segment, audio region, etc)</li>
+<li>Select a new label</li>
+</ol>
+<h3 id="Delete-entity"><a href="#Delete-entity" class="headerlink" title="Delete entity"></a>Delete entity</h3><ol>
+<li>Select entity </li>
+<li>Press Backspace or go to Results panel and remove selected item </li>
+</ol>
+<h3 id="Add-relation"><a href="#Add-relation" class="headerlink" title="Add relation"></a>Add relation</h3><p>You can create relations between two results with  </p>
+<ul>
+<li>direction </li>
+<li>and labels (<a href="/tags/relations.html">read more about relations with labels</a>)</li>
+</ul>
+<br>
+<img src="/images/screens/relations.png">
+
+<ol>
+<li>Select a first region (bounding box, text span, etc)</li>
+<li>Click on “Create Relation” button</li>
+<li>Select the second region</li>
+<li><strong>Optionally</strong>: After the relation is created you can change the direction by click on the direction button</li>
+<li><strong>Optionally</strong>: <a href="/tags/relations.html">If you’ve configured labels</a>, click on the triple dots button and add your predefined labels</li>
+</ol>
+<h2 id="Hotkeys"><a href="#Hotkeys" class="headerlink" title="Hotkeys"></a>Hotkeys</h2><p>Use hotkeys to improve your labeling performance. Hotkeys help is available in the labeling settings dialog.</p>
+<table>
+<tr><th>Key</th><th>Description</th></tr>
+<tr><td>ctrl+enter</td><td>Submit a task</td></tr>
+<tr><td>ctrl+backspace</td><td>Delete all regions</td></tr>
+<tr><td>escape</td><td>Exit relation mode</td></tr>
+<tr><td>backspace</td><td>Delete selected region</td></tr>
+<tr><td>alt+shift+$n</td><td>Select a region</td></tr>
+</table>
+
+
+
+  
+    <div class="guide-links">
+      
+      
+        <span>← <a href="/guide/setup.html">Project setup</a></span>
+      
+      
+      
+        <span style="float: right;"><a href="/guide/completions.html">Export results</a> →</span>
+      
+    </div>
+    
+
+  <div class="footer-slack">
+    <a href="https://join.slack.com/t/label-studio/shared_invite/zt-cr8b7ygm-6L45z7biEBw4HXa5A2b5pw">
+      Could not find what you were looking for or have found an error? Please drop us a note on
+      Slack&nbsp;<img style="height: 18px; position: absolute" src="/images/slack.png">
+    </a>
+  </div>
+</div>
+
+        </div>
+    
+
+    <script src="/js/css.escape.js"></script>
+    <script src="/js/common.js"></script>
+    
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-129877673-4', 'auto');
+	ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
